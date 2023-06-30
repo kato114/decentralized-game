@@ -1,0 +1,9 @@
+node_modules/*
+compiled/*
+.cache/*
+*.d.ts
+npm/*
+examples/
+coverage/
+.husky/
+*.js

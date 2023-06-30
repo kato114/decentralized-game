@@ -1,0 +1,16 @@
+version: '3'
+services:
+
+  website:
+    container_name: website
+    image: decentralgames-website:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP_ENV: testing # change this to adjust which environments APIs are called
+        NODE_ENV: test # NOTE: Can only be "test", "development" or "production" per NextJS config rules
+    restart: always
+    user: root
+    ports:
+      - "3000:3000"

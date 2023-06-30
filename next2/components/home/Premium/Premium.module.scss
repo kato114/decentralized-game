@@ -1,0 +1,369 @@
+.premium {
+    padding-top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+
+    .spinner_wrapper {
+        position: relative;
+        margin-top: calc(50vh - 230px);
+        width: 50px;
+    }
+
+    .header {
+        text-align: center;
+
+        .title {
+            font-family: "Larsseit-Bold";
+            font-weight: 800 !important;
+            font-size: 32px;
+            line-height: 44px;
+            text-align: center;
+
+            @media (max-width: 770px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+        .description {
+            margin-top: 5px;
+            margin-bottom: 32px;
+            font-family: "Larsseit-Regular";
+            font-style: normal;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5) !important;
+
+            @media (max-width: 770px) {
+                font-size: 14px;
+                line-height: 18px;
+                padding: 0px 16px;
+            }
+        }
+
+        img {
+            width: 120px;
+
+            @media (max-width: 770px) {
+                width: 100px;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 32px;
+        max-width: 420px;
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            div {
+                margin-left: 16px;
+
+                h1 {
+                    font-family: "Larsseit-Bold";
+                    font-weight: 800 !important;
+                    font-size: 18px;
+                    line-height: 24px;
+                    text-align: left;
+                }
+                p {
+                    font-family: "Larsseit-Regular";
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: left;
+                    color: rgba(255, 255, 255, 0.5) !important;
+                }
+            }
+        }
+
+        @media (max-width: 770px) {
+            max-width: 360px;
+
+            .row {
+                div {
+                    h1 {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                    p {
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .required_area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-family: "Larsseit-Bold";
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+
+        .card_area {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+
+            margin-bottom: 25px;
+            margin-top: 27px;
+            gap: 6px;
+
+            .card_area_body {
+                position: relative;
+                .not_enough {
+                    position: absolute;
+                    top: -10px;
+                    left: 50px;
+                    height: 20px;
+                    padding: 3px 10px;
+                    font-family: "Larsseit-Regular";
+                    font-size: 11px;
+                    line-height: 15px;
+                    color: white;
+                    background: #2a2a2a;
+                    border-radius: 6px;
+                }
+                .card {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    font-family: "Larsseit-Medium";
+                    font-style: normal;
+                    font-size: 22px;
+                    line-height: 37px;
+                    color: white !important;
+
+                    height: 62px;
+                    background: #090909;
+                    border: 1px solid #2a2a2a;
+                    box-sizing: border-box;
+                    border-radius: 14px;
+                    margin-bottom: 6px;
+                    padding: 0px 22px;
+
+                    img {
+                        margin-left: 6px;
+                        height: 24px;
+                    }
+                }
+
+                .description {
+                    font-family: "Larsseit-Regular";
+                    font-style: normal;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-align: center;
+                    margin-top: 8px;
+                    color: rgba(255, 255, 255, 0.5);
+
+                    abbr {
+                        color: rgba(255, 255, 255, 0.5) !important;
+                    }
+                }
+
+                .greenCheck {
+                    font-family: "Larsseit-Regular";
+                    font-style: normal;
+                    font-size: 14px;
+                    line-height: 19px;
+                    text-align: center;
+                    margin-top: 8px;
+                    color: #67dd6c !important;
+
+                    abbr {
+                        color: rgba(255, 255, 255, 0.5) !important;
+                    }
+
+                    svg {
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 420px;
+            height: 90px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: "Larsseit-Bold";
+            font-size: 24px;
+            line-height: 32px;
+            color: #fff;
+            border-radius: 16px;
+            background-color: #006eff;
+            transition: 0.2s ease-in;
+
+            abbr {
+                font-family: "Larsseit-Regular";
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+
+            &:hover {
+                opacity: 0.6;
+                transition: 0.2s ease-in;
+            }
+        }
+
+        .description_area {
+            max-width: 760px;
+            margin-bottom: 50px;
+            padding: 28px;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+
+            h1 {
+                font-family: "Larsseit-Bold";
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+                color: #fff !important;
+            }
+
+            li {
+                margin-top: 10px;
+                font-family: "Larsseit-Bold";
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+
+        @media (max-width: 770px) {
+            .card_area {
+                .card_area_body {
+                    .not_enough {
+                        left: 20px;
+                        font-size: 8px;
+                    }
+
+                    .card {
+                        padding: 0px 10px;
+                        height: 50px;
+                        font-size: 13px;
+                        line-height: 24px;
+
+                        img {
+                            height: 15px;
+                        }
+                    }
+                    .description {
+                        font-size: 8px;
+                        line-height: 12px;
+                    }
+                    .greenCheck {
+                        font-size: 8px;
+                        line-height: 12px;
+                    }
+                }
+            }
+
+            .button {
+                width: 320px;
+                height: 80px;
+                font-size: 20px;
+                line-height: 32px;
+
+                abbr {
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+            }
+
+            .description_area {
+                margin: 5px 15px 30px 15px;
+
+                h1 {
+                    font-size: 17px;
+                    line-height: 24px;
+                }
+
+                li {
+                    font-size: 13px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

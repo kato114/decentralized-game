@@ -1,0 +1,69 @@
+{
+  "navMenu": {
+    "PLAY": "재생",
+    "DAO": "다오",
+    "OFFERINGS": "제공",
+    "EVENTS": "이벤트",
+    "NEWS_BLOG": "뉴스 및 블로그",
+    "DOCS": "문서",
+    "part1": "테스트",
+    "MYACCOUNT": "내 계정"
+  },
+  
+  "Home": {
+    "PLAY": "재생",
+    "ANDOWN": "(그리고 소유)",
+    "FIRSTEVER": "최초의 메타버스 카지노",
+    "YOUAREHOUSE": "$DG와 함께라면 당신이 집입니다: 당신은 이익을 통제하고, 새로운 게임에 투표하고, 플레이함으로써 직접 돈을 벌 수 있습니다",
+    "INFO": "정보",
+    "LEARNMORE": "자세히 알아보기",
+    "PLAYNOW": "지금 플레이",
+
+    "PLAYTOEARN": "수익을 위해 플레이",
+    "PLAY_GAMES_META": "메타버스에서 게임을 하고 $DG 토큰을 얻거나 잃습니다. 예상 손실의 최대 50%를 $DG로 되돌려 받으십시오.",
+    "GAMES": "게임",
+    "SEEGAMES": "게임 보기",
+    "EARNAPY": "APY% 적립",
+    "STAKE_DG_GOVERNANCE": "거버넌스에 $DG를 걸고 최대 40%의 수익 보상을 받으세요.",
+    "VOTE_IN_THE_DAO": "DAO에 투표",
+    "BE_THE_HOUSE": "(집이 되어라)",
+    "WITH_THE_DG_DAO": "$DG DAO를 사용하면 카지노를 소유할 수 있습니다. 이익을 통제하고 새 게임에 투표하고 기능 제안을 결정하십시오.",
+    "EXPLORER": "Explore",
+    "EXPLORER_THREASURY": "Explore Treasury",
+    "OUR_PARTNERS": "Our Partners",
+    "HOW_TO_START_DG": "How to start with $DG",
+    "GET_STARTED": "Get Started",
+    "START_HERE": "Start Here",
+    "JOIN_OUR_COMMUNITY": "Join our community!"
+  },
+
+  "Footer": {
+    "TOKEN": "토큰",
+    "TREASURY": "재무부",
+    "DAOHOME": "",
+    "GOVERNANCE": "거버넌스",
+    "GAMEPLAY": "게임 플레이",
+    "LIQUDITY": "유동성",
+
+    "PLAY": "재생",
+    "GAMES": "게임",
+    "CASINO": "카지노",
+    "LEADERBOARD": "리더보드",
+
+    "SHOP": "상점",
+    "NFTS": "NFT",
+    "DCL_SHOPS": "DCL 상점",
+    "EVENTS": "이벤트",
+    "ALL_EVENTS": "모든 이벤트",
+    "PARTNER_SHIP": "파트너십",
+
+    "NEWS": "뉴스",
+    "BLOG": "블로그",
+    "JOIN_OUR_NEWS_LETTER": "뉴스레터에 가입하세요!",
+    "SUBSCRIBE_TO_OUR_NEWSLETTER": "주간 업데이트를 최신 상태로 유지하려면 뉴스레터를 구독하세요.",
+    "COPYRIGHT_2021": "저작권 © 2021 Web4 LTD. All rights reserved",
+
+    "SIGNUP_FOR_SUBSTACK": "Substack 가입",
+    "WE_USE_CLLOKIES": "우리는 더 나은 경험을 제공하기 위해 쿠키를 사용합니다."
+  }
+}

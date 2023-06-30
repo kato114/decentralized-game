@@ -1,0 +1,84 @@
+@import "styles/base.scss";
+
+.tout_container {
+    margin-left: 0px;
+
+    .tout_h1 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 43px;
+        font-family: Larsseit-Bold;
+        margin-top: 100px;
+        padding: 0px 20px;
+    }
+
+    .tout_image {
+        display: flex;
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: -1;
+    }
+
+    .tout_p {
+        max-width: 320px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: Larsseit-Light;
+        color: rgba(255, 255, 255, 0.75) !important;
+        margin-top: 0px;
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tout_span {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        .grey_button {
+            background-color: transparent;
+            margin-right: 0px;
+            margin-top: 10px;
+            color: white;
+            height: 48px;
+            padding: 12px 26px 12px 26px;
+            line-height: 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-family: Larsseit-Bold;
+            white-space: nowrap;
+
+            &:hover {
+                opacity: 0.6 !important;
+                transition: 0.2s ease-in !important;
+            }
+        }
+
+        .blue_button {
+            background: #006eff;
+            white-space: nowrap;
+            color: white;
+            width: 80%;
+            height: 48px;
+            padding: 12px 26px 12px 26px;
+            line-height: 24px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-family: Larsseit-Bold;
+
+            &:hover {
+                opacity: 0.6 !important;
+                transition: 0.2s ease-in !important;
+            }
+        }
+    }
+}

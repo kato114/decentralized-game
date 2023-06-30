@@ -1,0 +1,528 @@
+@import "styles/base.scss";
+
+.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.main_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 50px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    width: 100%;
+
+    .topDiv {
+        display: flex;
+        flex-direction: row;
+
+        .claimICEDiv {
+            .title {
+                h1 {
+                    font-family: "Larsseit-ExtraBold";
+                    font-weight: 800 !important;
+                    font-size: 24px;
+                    margin-bottom: 0;
+                    line-height: 32px;
+                    text-align: left;
+                }
+
+                @include mq($until: 499px) {
+                    h1 {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .lower {
+                padding: 28px;
+                border: 1px solid rgba(42, 42, 42, 1);
+                border-radius: 16px;
+                width: 330px;
+                min-height: 330px;
+                max-height: 330px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-top: 30px;
+                height: 100%;
+
+                .lower_header {
+                    h1 {
+                        font-family: Larsseit-Bold;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                    p {
+                        font-family: Larsseit-Regular;
+                        font-size: 15px;
+                        line-height: 21px;
+                        text-align: center;
+                        color: rgba(255, 255, 255, 0.5) !important;
+                        margin-top: 3px;
+
+                        abbr {
+                            color: white;
+                        }
+                    }
+                }
+
+                .lower_img {
+                    width: 240px;
+                    align-self: center;
+                    margin-top: -8px;
+                }
+
+                .lower_text {
+                    font-family: Larsseit-Regular;
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+
+                .lower_button {
+                    width: 100%;
+                    background: #006eff;
+                    color: white;
+                    border-radius: 10px;
+                    height: 40px;
+                    font-family: 'Larsseit-ExtraBold';
+                    font-size: 14px;
+                }
+
+                .lower_button {
+                    margin-top: 20px !important;
+                    margin-bottom: 0px !important;
+                    background: rgb(31, 31, 31);
+                    color: white;
+                    transition: 0.2s ease-in !important;
+
+                    &:active,
+                    &:focus {
+                        opacity: 1;
+                        filter: none !important;
+                        transition: 0.2s ease-in;
+                    }
+
+                    &:hover {
+                        opacity: 0.6;
+                        filter: none !important;
+                        transition: 0.2s ease-in;
+                    }
+                }
+
+                .lower_value {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    .ICE_value {
+                        font-family: Larsseit-Bold;
+                        font-size: 42px;
+                        margin-right: 12px;
+                        margin-bottom: 0;
+                    }
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                .price {
+                    font-family: Larsseit-Bold;
+                    font-size: 20px;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.5) !important;
+                    margin-bottom: 16px;
+                }
+
+                .claim_ICE {
+                    margin-top: 0;
+                    margin-bottom: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .iceEarnedDiv {
+            position: relative;
+            min-width: 540px;
+            max-width: 540px;
+            margin-left: 32px;
+
+            .title {
+                h1 {
+                    font-family: "Larsseit-ExtraBold";
+                    font-weight: 800 !important;
+                    font-size: 24px;
+                    margin-bottom: 0;
+                    line-height: 32px;
+                    text-align: left;
+                }
+
+                @include mq($until: 499px) {
+                    h1 {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .graph {
+                position: relative;
+                padding: 40px 28px 80px 28px;
+                border: 1px solid rgba(42, 42, 42, 1);
+                border-radius: 16px;
+                width: 100%;
+                min-height: 330px;
+                max-height: 330px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                margin-top: 30px;
+
+                .bottomDiv {
+                    position: relative;
+                    top: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .legend {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 240px;
+                        padding: 8px;
+                        background: #1f1f1f;
+                        border-radius: 8px;
+
+                        div {
+                            display: flex;
+                            font-size: 14px;
+                            color: #ffffff;
+                            font-family: "Larsseit-Medium";
+                            letter-spacing: 0.3px;
+
+                            section {
+                                margin-right: 9px;
+                                margin-top: 1px;
+                            }
+                        }
+
+                        .delegationBG {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
+                            background: #5ebff5;
+                        }
+                        .gamePlayBG {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
+                            background: #b0e6ff;
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        .ice {
+                            display: flex;
+                            font-size: 14px;
+                            color: #ffffff;
+                            font-family: "Larsseit-Medium";
+                            letter-spacing: 0.3px;
+
+                            img {
+                                width: 16px;
+                                margin-right: 5px;
+                            }
+                        }
+                        .xp {
+                            display: flex;
+                            margin-left: 20px;
+                            font-size: 14px;
+                            color: #ffffff;
+                            font-family: "Larsseit-Medium";
+                            letter-spacing: 0.3px;
+
+                            img {
+                                width: 18px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .history {
+        position: relative;
+        max-width: 900px;
+        margin-top: 50px;
+        font-family: "Larsseit-Light";
+        font-size: 18px;
+        letter-spacing: 1px;
+
+        .title {
+            margin-bottom: 30px;
+
+            h1 {
+                font-family: "Larsseit-ExtraBold";
+                font-weight: 800 !important;
+                font-size: 24px;
+                margin-bottom: 0;
+                line-height: 32px;
+                text-align: left;
+            }
+
+            @include mq($until: 499px) {
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        table {
+            margin-bottom: 100px;
+
+            tr {
+                th {
+                    text-align: center;
+                }
+
+                td {
+                    position: relative;
+                    text-align: center;
+                    font-size: 17px;
+                    font-family: "Larsseit-Medium";
+                    color: rgba(255, 255, 255, 0.6) !important;
+                }
+
+                .iceEarned {
+                    .earnedDiv {
+                        width: 60%;
+                        text-align: right;
+                    }
+                    img {
+                        position: absolute;
+                        top: 26px;
+                        left: calc(60% + 2px);
+                        width: 18px;
+                    }
+                }
+
+                .xpEarned {
+                    .earnedDiv {
+                        width: 55%;
+                        text-align: right;
+                    }
+                    img {
+                        position: absolute;
+                        top: 27px;
+                        left: 55%;
+                        width: 22px;
+                        margin-left: 3px;
+                    }
+                }
+
+                button {
+                    background: transparent !important;
+                    color: #fff !important;
+                    font-family: "Larsseit-Light";
+                    letter-spacing: 0.5px;
+                    border: 2px solid rgba(255, 255, 255, 0.08);
+                    &:disabled {
+                        padding: 11px 21px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq($until: 1200px) {
+        .topDiv {
+            display: flex;
+            flex-direction: row;
+
+            .iceEarnedDiv {
+                position: relative !important;
+                min-width: 400px !important;
+                max-width: 400px !important;
+                margin-left: 20px !important;
+
+                .graph {
+                    .bottomDiv {
+                        flex-direction: column !important;
+                        top: 5px !important;
+
+                        .legend {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .history {
+            max-width: 750px;
+        }
+    }
+
+    @include mq($until: 900px) {
+        .topDiv {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+
+            .claimICEDiv {
+                .lower {
+                    margin-top: 10px;
+                }
+            }
+
+            .iceEarnedDiv {
+                position: relative !important;
+                min-width: 400px !important;
+                max-width: 400px !important;
+                margin-left: 0px !important;
+                margin-top: 50px !important;
+
+                .graph {
+                    margin-top: 10px;
+
+                    .bottomDiv {
+                        flex-direction: column !important;
+                        top: 5px !important;
+
+                        .legend {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .history {
+            max-width: calc(100% - 50px);
+        }
+    }
+
+    @include mq($until: 530px) {
+        margin-top: 50px;
+        margin-left: 20px;
+        width: calc(100vw - 40px);
+
+        .topDiv {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+
+            .claimICEDiv {
+                .title {
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+                .lower {
+                    padding: 28px 12px;
+                    margin-top: 10px;
+                    width: calc(100vw - 40px);
+
+                    .lower_header {
+                        h1 {
+                            font-size: 18px;
+                        }
+
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+
+            .iceEarnedDiv {
+                position: relative !important;
+                min-width: calc(100vw - 40px) !important;
+                max-width: calc(100vw - 40px) !important;
+                margin-left: 0px !important;
+                margin-top: 50px !important;
+
+                .title {
+                    h1 {
+                        font-size: 20px;
+                    }
+                }
+
+                .graph {
+                    margin-top: 10px;
+
+                    .bottomDiv {
+                        flex-direction: column !important;
+                        top: 5px !important;
+
+                        .legend {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .history {
+            max-width: calc(100%);
+            margin-top: 0px;
+
+            .title {
+                margin-bottom: 15px;
+                h1 {
+                    font-size: 20px;
+                }
+            }
+
+            table {
+                margin-bottom: 100px;
+
+                tr {
+                    th {
+                        font-size: 12px !important;
+                        padding-left: 3px;
+                        padding-right: 3px;
+                        padding-bottom: 10px;
+                    }
+
+                    td {
+                        font-size: 12px !important;
+                        padding: 3px 5px;
+                        height: 50px;
+                    }
+
+                    .iceEarned {
+                        img {
+                            top: 18px;
+                            width: 14px;
+                        }
+                    }
+
+                    .xpEarned {
+                        img {
+                            position: absolute;
+                            top: 19px;
+                            left: 55%;
+                            width: 16px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

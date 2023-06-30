@@ -1,0 +1,231 @@
+@import "styles/base.scss";
+
+.wearable_section {
+  max-width: 1010px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include mq($until: medium) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.wearable {
+  .wearable_card_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1010px;
+    margin: auto;
+
+    .wearable_card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wearable_card_buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .wearable_container {
+      width: 550px;
+      margin: auto;
+
+      .wearable_img {
+        width: 550px;
+      }
+
+      .play_text {
+        font-family: "Larsseit-ExtraBold";
+        font-size: 24px;
+        letter-spacing: -0.7px;
+        text-align: center;
+      }
+
+      .play_lower {
+        font-family: "Larsseit-Regular";
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(255, 255, 255, 0.5) !important;
+        text-align: center;
+        width: 300px;
+        margin: -16px auto 0px auto;
+      }
+
+      .button_span {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        margin-bottom: 120px;
+
+        .left_button {
+          background: #1f1f1f;
+          height: 48px;
+          width: 111px;
+          font-size: 17px;
+          color: #ffffff;
+          border-radius: 12px;
+          font-family: "Larsseit-Bold";
+          margin-right: 16px;
+
+          &:hover,
+          &:focus,
+          &:active {
+            background: #1f1f1f;
+            color: #ffffff;
+            filter: brightness(0.9);
+          }
+        }
+
+        .right_button {
+          background: #006eff;
+          height: 48px;
+          font-size: 17px;
+          color: #ffffff;
+          white-space: nowrap;
+          border-radius: 12px;
+          font-family: "Larsseit-Bold";
+
+          &:hover,
+          &:focus,
+          &:active {
+            background: #006eff;
+            color: #ffffff;
+            filter: brightness(0.9);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .wearable {
+    .wearable_card_container {
+      padding-left: 0px;
+      padding-right: 0px;
+      margin-left: -10px;
+      margin-right: -10px;
+
+      .balance_column {
+        width: 100%;
+      }
+
+      .reward {
+        width: 100%;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.wearable_header {
+  margin: auto;
+  margin-top: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    padding-top: 24px;
+    color: #ffffff;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.5) !important;
+    font-size: 16px;
+  }
+
+  .open_sea {
+    border-radius: 16px;
+    margin-top: 40px;
+    height: 35px;
+    color: #ffffff;
+    padding: 6px 24px 6px 24px;
+    font-size: 14px;
+    background: #1f1f1f;
+    font-family: "Larsseit-Bold";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9) !important;
+      color: #ffffff;
+      background: #1f1f1f;
+    }
+
+    &:focus {
+      filter: brightness(0.9) !important;
+      color: #ffffff;
+      background: #1f1f1f;
+    }
+
+    svg {
+      padding-top: 3px;
+      margin-left: 4px;
+      margin-bottom: 3px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .wearable_header {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-right: 0px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .open_sea {
+      height: 30px;
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+}
+
+.wearables_grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+}
+
+.no_ice_wearables {
+  font-family: "Larsseit-Bold";
+  font-size: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6) !important;
+  padding-bottom: 60px;
+}
+
+.grid_container {
+  margin-top: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  @include mq($until: medium) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

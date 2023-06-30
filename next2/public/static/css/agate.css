@@ -1,0 +1,101 @@
+/*
+  Five-color theme from a single blue hue.
+*/
+
+pre {
+  margin-top: 30px;
+}
+
+#copy-button {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #2085f4 !important;
+  color: #2085f4;
+  margin-top: 1px;
+  font-size: 12px;
+  font-weight: bold !important;
+  border-radius: 2px;
+  height: 27px;
+  padding: 4px 12px 3px 12px !important;
+  min-width: 95px;
+  letter-spacing: 0.5px;
+  opacity: 100% !important;
+  display: none;
+}
+
+code strong,
+kbd,
+samp {
+  font-size: 16px !important;
+  padding: 3px 6px 3px 6px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+code {
+  line-height: 0.9 !important;
+  font-size: 16px !important;
+}
+
+b,
+strong {
+  font-weight: 800;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-strong,
+.hljs-built_in,
+.hljs-attr {
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: #738191;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-literal,
+.hljs-type,
+.hljs-addition,
+.hljs-tag,
+.hljs-quote,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #2085f4;
+}
+
+.hljs-number,
+.hljs-params {
+  color: #4c9df6;
+}
+
+.hljs-meta,
+.hljs-subst,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-deletion,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-bullet {
+  color: #165daa;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}

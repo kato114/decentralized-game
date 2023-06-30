@@ -1,0 +1,29 @@
+@import "styles/base.scss";
+
+.main_wrapper {
+    min-height: 100%;
+    background-image: url("https://res.cloudinary.com/dnzambf4m/image/upload/c_scale,w_210,q_auto:good/v1634392959/IcePokerBg_orakvo.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+        h1 {
+            font-family: "Larsseit-ExtraBold";
+            font-weight: 800 !important;
+            font-size: 42px;
+            margin-bottom: 0;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        @include mq($until: 499px) {
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+}

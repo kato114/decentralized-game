@@ -1,0 +1,248 @@
+@import "styles/base.scss";
+
+.main_wrapper {
+    .header_steps {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        margin-top: 80px;
+
+        .step_active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 150px;
+            max-width: 150px;
+            cursor: pointer;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                background: #ffffff;
+                border-radius: 50%;
+                font-family: "Larsseit-Medium";
+                font-size: 33px;
+                font-weight: 700;
+                color: #000000;
+            }
+
+            p {
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: "Larsseit-Light";
+                letter-spacing: 0.8px;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 150px;
+            max-width: 150px;
+            cursor: pointer;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
+                height: 48px;
+                background: #1f1f1f;
+                border-radius: 50%;
+                font-family: "Larsseit-Medium";
+                font-size: 33px;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.5);
+                transition: 0.2s ease-in;
+            }
+
+            p {
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 700;
+                font-family: "Larsseit-Light";
+                letter-spacing: 0.8px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.5) !important;
+                transition: 0.2s ease-in;
+            }
+
+            &:hover {
+                div {
+                    background: #ffffff;
+                    color: #000000;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+
+        .bullets {
+            color: #1f1f1f !important;
+            font-size: 20px;
+            margin: 15px 20px;
+
+            abbr {
+                padding: 4px;
+            }
+        }
+
+        @media screen and (max-width: 1240px) {
+            .step_active,
+            .step {
+                min-width: 100px;
+                max-width: 100px;
+
+                div {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .bullets {
+                margin: 10px 20px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .bullets {
+                font-size: 15px;
+                margin: 10px 5px;
+
+                abbr {
+                    padding: 2px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            margin-top: 50px;
+
+            .step_active,
+            .step {
+                min-width: 80px;
+                max-width: 80px;
+                padding-left: 3px;
+                padding-right: 3px;
+
+                div {
+                    width: 36px;
+                    height: 36px;
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 9px;
+                }
+            }
+
+            .bullets {
+                font-size: 12px;
+                margin: 10px 0px;
+
+                abbr {
+                    padding: 0px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            margin-top: 50px;
+
+            .step_active,
+            .step {
+                min-width: 50px;
+                max-width: 50px;
+
+                div {
+                    width: 32px;
+                    height: 32px;
+                    font-size: 18px;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+
+            .bullets {
+                font-size: 12px;
+                margin: 10px 0px;
+
+                abbr {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-top: 50px;
+        margin-bottom: 30px;
+
+        @media screen and (max-width: 500px) {
+            margin-top: 40px;
+        }
+    }
+
+    .footer_buttons {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-bottom: 50px;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 85px;
+            height: 36px;
+            margin-left: 12px;
+            margin-right: 12px;
+            background: #1f1f1f;
+            border-radius: 8px;
+            color: #ffffff;
+            transition: 0.2s ease-in;
+
+            img {
+                width: 15px;
+            }
+            .left {
+                margin-right: 5px;
+                margin-top: -2px;
+            }
+            .right {
+                margin-left: 5px;
+                margin-top: -1px;
+            }
+
+            &:active,
+            &:focus {
+                color: #ffffff;
+                background: #1f1f1f;
+                opacity: 1;
+                transition: 0.2s ease-in;
+            }
+
+            &:hover {
+                color: #ffffff;
+                background: #1f1f1f;
+                opacity: 0.6;
+                transition: 0.2s ease-in;
+            }
+        }
+    }
+}

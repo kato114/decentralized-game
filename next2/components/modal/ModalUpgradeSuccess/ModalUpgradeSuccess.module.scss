@@ -1,0 +1,256 @@
+@import "styles/base.scss";
+
+.open_button {
+  background-color: #006eff !important;
+  color: white !important;
+  height: 42px;
+  width: calc(50% - 8px);
+  border-radius: 10px !important;
+  font-family: Larsseit-Bold;
+  font-size: 14px !important;
+}
+
+.success_modal {
+  width: 480px !important;
+  height: 621px !important;
+  background: #000000 !important;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24) !important;
+  border-radius: 24px !important;
+  padding: 40px;
+
+  .header_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 36px;
+      height: 36px;
+      background: black;
+      color: white;
+
+      cursor: pointer;
+      border-radius: 24px;
+      margin-top: 10px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-family: Larsseit-Bold;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: white;
+
+      cursor: pointer;
+      width: 109px;
+      height: 48px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+  
+  .fadeIn {
+    animation: fadeInAnimation 2s linear;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .success_container {
+    margin-top: 5px;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-family: Larsseit-ExtraBold;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .card {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .toppercent {
+        position: absolute;
+        width: 94px;
+        height: 41px;
+        left: calc(50% - 50px);
+        top: 95px;
+        background: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 93px;
+
+        font-family: Larsseit-Regular;
+        font-style: normal;
+        font-size: 17.6218px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image {
+        text-align: center;
+
+        .logo {
+          width: 241px;
+          height: 241px;
+          border-radius: 16px;
+        }
+      }
+      .properties {
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        .round {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          font-family: Larsseit-Regular;
+          font-style: normal;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 16px;
+          text-align: center;
+          color: #ffffff;
+          background: #000;
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24);
+          border-radius: 24px;
+          padding: 5px 12px;
+          border: 1px solid #2a2a2a;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      width: 395px;
+
+      .primary {
+        background: #006eff;
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+        background: #006eff;
+        border-radius: 16px;
+      }
+      .none {
+        background: #000;
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #ffffff;
+        background: #000;
+        border-radius: 16px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .success_modal {
+    width: 330px !important;
+    height: 560px !important;
+    margin-top: 35px;
+
+    .header_buttons {
+      top: -45px;
+      height: 35px;
+
+      .button_close {
+        position: relative;
+        margin-top: 0px;
+        width: 32px;
+        height: 32px;
+      }
+      .button_help {
+        width: 100px;
+        height: 36px;
+        font-size: 15px;
+      }
+    }
+
+    .success_container {
+      margin-top: 5px;
+
+      .title {
+        font-size: 24px;
+      }
+      .card {
+        .toppercent {
+          width: 78px;
+          height: 32px;
+          font-size: 13px;
+          left: calc(50% - 40px);
+
+          img {
+            width: 15px !important;
+          }
+        }
+        .image {
+          .logo {
+            width: 215px;
+            height: 215px;
+            border-radius: 16px;
+          }
+        }
+      }
+
+      .buttons {
+        .primary {
+          font-size: 18px;
+          line-height: 32px;
+        }
+        .none {
+          font-size: 18px;
+          line-height: 32px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+@import "styles/base.scss";
+
+.open_button {
+  background-color: #0d6efd !important;
+  color: white !important;
+  height: 43px;
+  border-radius: 10px !important;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.error_text {
+  font-family: Larsseit-Regular;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #ffb5b5;
+  margin-top: 12px;
+}
+
+.dgactivate_modal {
+  width: 480px !important;
+  height: 490px !important;
+  background: black !important;
+  border-radius: 24px !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 58px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24);
+
+  .top_buttons {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-family: Larsseit-Bold;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+
+      color: white;
+      cursor: pointer;
+      width: 109px;
+      height: 48px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .title {
+    font-family: Larsseit-ExtraBold;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+
+    .metamask {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .desc {
+    margin-top: 8px;
+    font-family: Larsseit-Regular;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    .link {
+      color: #509bff !important;
+    }
+  }
+
+  .dgSection {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Larsseit-Medium";
+    font-style: normal;
+    line-height: 35px;
+    letter-spacing: 0.3px;
+    margin-top: 24px;
+
+    .greenCheck {
+      font-family: Larsseit-Regular;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #67dd6c !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dgAmount {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        border: 1px solid #2a2a2a;
+        border-radius: 18px;
+        padding: 12px 30px;
+        background: #090909;
+
+        img {
+          width: 22px;
+          margin-left: 8px;
+          position: relative;
+          top: 3px;
+        }
+      }
+    }
+
+    p {
+      font-family: "Larsseit-Medium";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      text-align: center;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.5) !important;
+
+      abbr {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .buttons {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .primary {
+      position: relative;
+      height: 90px;
+      background: #006eff;
+      font-family: Larsseit-Regular;
+      font-style: normal;
+      font-size: 22px;
+      letter-spacing: 0.8px;
+      line-height: 33px;
+      text-align: center;
+      color: #ffffff;
+      background: #006eff;
+      border-radius: 16px;
+
+      img {
+        position: absolute;
+        left: 40px;
+        bottom: 27px;
+        margin-right: 24px;
+        width: 38px;
+      }
+    }
+  }
+}

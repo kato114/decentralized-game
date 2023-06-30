@@ -1,0 +1,894 @@
+[
+  {
+    "type": "constructor",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_defaultTokenAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "_defaultTokenName",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "AccountEnabled",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_user",
+        "internalType": "address",
+        "indexed": false
+      },
+      {
+        "type": "uint256",
+        "name": "_sessionDuration",
+        "internalType": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "CEOSet",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "newCEO",
+        "internalType": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MetaTransactionExecuted",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "userAddress",
+        "internalType": "address",
+        "indexed": false
+      },
+      {
+        "type": "address",
+        "name": "relayerAddress",
+        "internalType": "address payable",
+        "indexed": false
+      },
+      {
+        "type": "bytes",
+        "name": "functionSignature",
+        "internalType": "bytes",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Paused",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Unpaused",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "WorkerSet",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "newWorker",
+        "internalType": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "addFunds",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint256",
+        "name": "_tokenAmount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "addGame",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_newGameAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "_newGameName",
+        "internalType": "string"
+      },
+      {
+        "type": "bool",
+        "name": "_isActive",
+        "internalType": "bool"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "addToken",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_tokenAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "_tokenName",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "ceoAddress",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "checkAllocatedTokens",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "checkApproval",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_userAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "checkGameTokens",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "consumeHash",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "_localhash",
+        "internalType": "bytes32"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "deleteGame",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "deleteToken",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "disableAccount",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_account",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "disableGame",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "enableAccount",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_sessionDuration",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "enableGame",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "enabledTill",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "outputs": [
+      {
+        "type": "bytes",
+        "name": "",
+        "internalType": "bytes"
+      }
+    ],
+    "name": "executeMetaTransaction",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "userAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "bytes",
+        "name": "functionSignature",
+        "internalType": "bytes"
+      },
+      {
+        "type": "bytes32",
+        "name": "sigR",
+        "internalType": "bytes32"
+      },
+      {
+        "type": "bytes32",
+        "name": "sigS",
+        "internalType": "bytes32"
+      },
+      {
+        "type": "uint8",
+        "name": "sigV",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "gameMaximumBet",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint128",
+        "name": "",
+        "internalType": "uint128"
+      }
+    ],
+    "name": "getMaximumBet",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "nonce",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "getNonce",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "user",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "getTokenAddress",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "string",
+        "name": "",
+        "internalType": "string"
+      }
+    ],
+    "name": "getTokenName",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "isEnabled",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_account",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "pause",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "paused",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setCEO",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_newCEO",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setMaximumBet",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint128",
+        "name": "_maximumBet",
+        "internalType": "uint128"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setTail",
+    "inputs": [
+      {
+        "type": "bytes32",
+        "name": "_tail",
+        "internalType": "bytes32"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setWorker",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_newWorker",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint8",
+        "name": "index",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "status",
+        "internalType": "enum GameController.GameStatus"
+      }
+    ],
+    "name": "settings",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bytes32",
+        "name": "",
+        "internalType": "bytes32"
+      }
+    ],
+    "name": "tail",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "timeFrame",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "tokenInboundTransfer",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "address",
+        "name": "_from",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_amount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "tokenOutboundTransfer",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "address",
+        "name": "_to",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_amount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "gameAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "gameName",
+        "internalType": "string"
+      }
+    ],
+    "name": "treasuryGames",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "tokenAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "tokenName",
+        "internalType": "string"
+      }
+    ],
+    "name": "treasuryTokens",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "unpause",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateGameAddress",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "address",
+        "name": "_newGameAddress",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateGameName",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "string",
+        "name": "_newGameName",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateTokenAddress",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "address",
+        "name": "_newTokenAddress",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "updateTokenName",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "string",
+        "name": "_newTokenName",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "withdrawGameTokens",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_gameIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      },
+      {
+        "type": "uint256",
+        "name": "_amount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "withdrawTreasuryTokens",
+    "inputs": [
+      {
+        "type": "uint8",
+        "name": "_tokenIndex",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "workerAddress",
+    "inputs": []
+  },
+  {
+    "type": "receive",
+    "stateMutability": "payable"
+  }
+]

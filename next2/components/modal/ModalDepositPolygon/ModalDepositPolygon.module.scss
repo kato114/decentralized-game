@@ -1,0 +1,140 @@
+@import "styles/base.scss";
+
+.open_button {
+    background: #006eff !important;
+    color: white !important;
+    border-radius: 10px !important;
+    height: 64px;
+    line-height: 18px;
+    font-family: Larsseit-Bold;
+    font-size: 22px !important;
+    width: 100%;
+    margin-top: 24px !important;
+}
+
+.deposit_polygon_modal {
+    width: 520px !important;
+    height: 530px !important;
+    background: #000000 !important;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24) !important;
+    border-radius: 24px !important;
+    padding: 40px;
+    transform: scale(0.8);
+
+    .header_buttons {
+        left: 0px;
+        top: -56px;
+        height: 48px;
+        width: 100%;
+
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .button_close {
+            width: 36px;
+            height: 36px;
+            background: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 50%;
+            padding: 8px 10px 8px 10px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1.11);
+        }
+
+        .button_help {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            font-family: Larsseit-Bold;
+            font-style: normal;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            width: 109px;
+            height: 48px;
+            background: black;
+            border-radius: 24px;
+            padding: 8px 10px 8px 10px;
+        }
+    }
+
+    .success_container {
+        margin-top: 5px;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-family: Larsseit-ExtraBold;
+            font-size: 32px;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .description {
+            margin-top: 18px;
+            font-family: "Larsseit-Regular";
+            text-align: center;
+            font-size: 19px;
+            line-height: 23px;
+            color: #fff;
+
+            a {
+                color: #1e70bf;
+                cursor: pointer;
+
+                &:hover {
+                    color: #376aaf;
+                }
+            }
+        }
+
+        .img {
+            margin-top: 27px;
+            margin-bottom: 35px;
+            text-align: center;
+
+            img {
+                width: 137px;
+            }
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            .primary {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #006eff;
+                font-family: Larsseit-Bold;
+                font-style: normal;
+                font-size: 24px;
+                line-height: 75px;
+                letter-spacing: 0.7px;
+                text-align: center;
+                color: #ffffff;
+                background: #006eff;
+                border-radius: 16px;
+                margin-right: 0px;
+                img {
+                    width: 23px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

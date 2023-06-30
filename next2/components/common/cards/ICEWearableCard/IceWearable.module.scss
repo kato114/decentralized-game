@@ -1,0 +1,246 @@
+@import "styles/base.scss";
+
+.card_container {
+  margin: 0 auto;
+}
+
+.wearable_modal {
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 16px !important;
+
+  .title {
+    font-size: 24px !important;
+    font-family: "Larsseit-Extrabold";
+    color: #ffffff;
+    margin-bottom: 4px;
+    text-align: left;
+  }
+
+  .meta {
+    font-size: 16px;
+    font-family: "Larsseit-Medium";
+    color: #ffffff;
+    opacity: 0.6;
+    text-align: left;
+  }
+
+  .wear_box {
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+
+    .wear_box_purple {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 12px;
+
+      img {
+        width: 100%;
+        border-radius: 16px;
+      }
+
+      .p2e_enabled {
+        position: absolute;
+        top: -45px;
+        cursor: pointer;
+      }
+
+      @include mq($until: medium) {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .card_body {
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 14px;
+
+      .delegated {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 40px);
+        position: absolute;
+        top: -60px;
+        left: 20px;
+        padding: 7px 15px;
+        border-radius: 25px;
+        background: rgba(0, 0, 0, 0.75);
+        cursor: pointer;
+
+        div {
+          line-height: 12px;
+        }
+
+        input {
+          max-width: 140px;
+          height: 13px;
+          background-color: transparent;
+          font-size: 12px !important;
+          font-family: "Larsseit-Medium";
+          color: #ffffff;
+          border: none;
+
+          &:disabled {
+            color: rgba(255, 255, 255, 0.6) !important;
+          }
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #ffffff !important;
+          }
+        }
+
+        h1 {
+          color: #fff;
+          font-size: 12px;
+          font-family: "Larsseit-Medium";
+          font-weight: lighter !important;
+        }
+
+        img {
+          width: 12px;
+          height: auto;
+          margin-left: 5px;
+        }
+
+        svg {
+          margin-left: 5px;
+          top: 1px;
+        }
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        padding: 5px 12px 5px 12px;
+
+        border: 1px solid #2a2a2a;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+
+        font-family: "Larsseit-Regular";
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        color: #ffffff;
+
+        .img {
+          margin-left: 3px;
+          width: 100%;
+          height: 12px;
+        }
+      }
+    }
+
+    @include mq($until: medium) {
+      border: 1px solid #2a2a2a;
+      padding-top: 36px;
+    }
+  }
+
+  .card_meta {
+    font-family: "Larsseit-Medium";
+    font-style: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-top: 14px;
+  }
+
+  .card_title {
+    margin-top: 15px;
+
+    p {
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 28px;
+      color: #ffffff;
+      margin: 0;
+    }
+    span {
+      font-family: 'Larsseit-Bold';
+      font-style: normal;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .button_area {
+    display: flex;
+    margin-top: 15px;
+
+    .upgrade_button {
+      background-color: #006eff !important;
+      color: #ffffff !important;
+      height: 43px;
+      border-radius: 10px !important;
+      width: 100%;
+      font-family: "Larsseit-Bold" !important;
+      font-size: 14px !important;
+      line-height: 22px !important;
+    }
+
+    .button_close {
+      display: flex;
+      flex: auto;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      background: #2a2a2a;
+      border-radius: 10px;
+
+      font-family: "Larsseit-Regular";
+      font-size: 14px;
+      line-height: 27px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wearable_modal {
+    .wear_box {
+      .wear_box_purple {
+        img {
+          width: 100%;
+        }
+
+        .p2e_enabled {
+          position: absolute;
+          top: -30px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .wearable_modal {
+    .wear_box {
+      .wear_box_purple {
+        .p2e_enabled {
+          position: absolute;
+          top: -45px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+@import 'styles/base.scss';
+
+.dashboard_menu_container {
+  z-index: 30;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  user-select: none;
+
+  .mobile_menu {
+    position: fixed;
+    //top: 135px;
+    width: 100%;
+    left: 0;
+    background: #000;
+    font-size: 18px;
+    font-family: Larsseit-Bold;
+    transition: all 0.3s ease;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0;
+
+    a {
+      padding: 21px 0 21px 33px;
+      color: rgba(255, 255, 255, 0.55);
+      cursor: pointer;
+
+      &:hover {
+        background: #1f1f1f;
+      }
+    }
+
+    &.open {
+      max-height: 500px;
+      padding: 0 0 12px 0;
+      position: relative;
+      top: -2px;
+      padding-bottom: 18px;
+    }
+  }
+
+  .menu_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    z-index: 3;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    text-align: center;
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+    padding: 0px 30px;
+    color: white;
+    font-size: 18px;
+    font-family: Larsseit-Bold;
+    transition: background 0.25s;
+    -webkit-transition: background 0.25s;
+
+    .right_menu_items {
+      display: flex;
+      margin-left: auto;
+
+      p {
+        border: none;
+        box-shadow: none;
+        letter-spacing: 1.25px;
+        line-height: 0px;
+        font-size: 18px;
+        font-family: Larsseit-Bold;
+        padding: 4px 6px 1px 6px;
+      }
+    }
+
+    .menu_logo {
+      width: 36px;
+      height: 100%;
+      position: relative;
+      z-index: 7;
+      cursor: pointer;
+    }
+
+    .menu_items_to_hide {
+      display: flex;
+      align-items: center;
+
+      svg {
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 400px) {
+        margin-left: -40px;
+      }
+      @media screen and (max-width: 399px) {
+        margin-left: auto;
+      }
+
+      @media screen and (min-width: 786px) and (max-width: 1150px) {
+        svg {
+          margin-left: 25px !important;
+          margin-top: -3px !important;
+        }
+      }
+
+      @media screen and (min-width: 470px) and (max-width: 785px) {
+        svg {
+          margin-left: 15px !important;
+          margin-top: 0px !important;
+        }
+      }
+
+      .menu_item_single {
+        .navigation_submenu {
+          position: absolute;
+          top: 100px;
+          background: #1f1f1f;
+          border: 1px solid #2a2a2a;
+          box-sizing: border-box;
+          box-shadow: 0px 24px 32px rgb(0 0 0 / 36%);
+          border-radius: 24px;
+          padding: 4px 20px;
+          opacity: 0;
+          transform: translate(0%, 4px);
+          transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease, -moz-transform 0.3s ease;
+          pointer-events: none;
+
+          .grid {
+            display: flex;
+            padding: 12px 0px;
+            margin: 0px;
+
+            .grid_component {
+              display: flex;
+              flex-direction: column;
+
+              a {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                padding: 12px 16px 12px 10px;
+                cursor: pointer;
+                transition: 0.2s ease-in;
+
+                &:hover {
+                  background: rgba(255, 255, 255, 0.04);
+                  border-radius: 12px;
+                  transition: 0.2s ease-in;
+                }
+
+                img {
+                  width: 48px;
+                }
+
+                .submenu_description {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
+                  margin-left: 12px;
+
+                  h1 {
+                    color: white;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: 'Larsseit-Bold';
+                  }
+                  p {
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-family: 'Larsseit-Regular';
+                    color: rgba(255, 255, 255, 0.5) !important;
+                  }
+                }
+              }
+            }
+          }
+
+          &::before {
+            position: absolute;
+            top: -35px;
+            left: 0px;
+            width: 100%;
+            height: 40px;
+            content: '';
+            display: block;
+          }
+        }
+
+        &:hover {
+          .navigation_submenu {
+            display: block;
+            pointer-events: auto;
+            opacity: 1;
+            transform: translate(0%);
+          }
+        }
+
+        svg {
+          @media screen and (max-width: 400px) {
+            margin-left: -32px;
+          }
+          @media screen and (min-width: 400px) {
+            margin-left: 56px;
+          }
+          cursor: pointer;
+        }
+      }
+
+      .menu_style {
+        padding: 0;
+        color: #ffffff !important;
+        flex-direction: column;
+        background: transparent;
+        text-align: center;
+        box-shadow: none;
+        font-family: Larsseit-Bold;
+        font-size: 18px;
+        display: flex;
+        justify-content: flex-start;
+        top: 15px;
+        height: 50px;
+        margin-left: 56px;
+        padding-right: 0 !important;
+
+        &:hover {
+          color: #ffffff;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1440px) {
+      max-width: 1240px;
+    }
+  }
+
+  &.dark {
+    opacity: 1;
+    background-color: black !important;
+    border-bottom: 1px solid rgb(42, 42, 42);
+  }
+
+  // AMNESIA_COMMENT: amnesia header class should be removed after we are done with amnesia
+  &.amnesia_header {
+    background-color: transparent !important;
+    border: none !important;
+  }
+}

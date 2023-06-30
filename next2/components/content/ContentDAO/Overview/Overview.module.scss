@@ -1,0 +1,654 @@
+@import 'styles/base.scss';
+
+.overview_container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
+  border-right: 1px solid #2a2a2a;
+  padding-top: 53px;
+  padding-left: 24px;
+
+  @include mq($until: 1267px) {
+    padding-bottom: 0;
+    border-right: 0px solid white;
+  }
+
+  @include mq($until: 499px) {
+    display: none;
+  }
+
+  .container_left {
+    padding-top: 0;
+    margin: 0 auto;
+    min-width: 600px;
+
+    @include mq($until: 1267px) {
+      margin-left: 26px;
+    }
+
+    .welcome_text {
+      font-family: Larsseit-Regular;
+      font-size: 20px;
+      color: rgba(255, 255, 255) !important;
+      margin-bottom: 0px;
+    }
+
+    .dashboard_text {
+      font-family: Larsseit-ExtraBold;
+      font-size: 32px;
+      letter-spacing: -0.7px;
+      color: rgba(255, 255, 255) !important;
+      margin-top: 0px;
+    }
+  }
+
+  .blue_container {
+    margin: 40px auto 0 auto;
+    padding: 36px 40px;
+    background: rgba(0, 110, 255, 1);
+    border-radius: 20px;
+    width: 600px;
+    display: flex;
+
+    @include mq($until: 1267px) {
+      margin-left: 26px;
+    }
+
+    .close_button {
+      width: 34px;
+      height: 34px;
+      background: rgba(31, 31, 31, 1);
+      border-radius: 100%;
+      padding: 9px 10px 8px 10px;
+      line-height: 18px;
+      margin: -20px -20px 0px 0px;
+      box-shadow: 0px 13.6px 27.2px rgba(0, 0, 0, 0.24);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .blue_text {
+      display: flex;
+      flex-direction: column;
+
+      .blue_header {
+        font-family: Larsseit-Bold;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 0px;
+      }
+
+      .blue_lower {
+        font-family: Larsseit-Regular;
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 12px;
+        margin-bottom: 18px;
+      }
+
+      .blue_button {
+        font-family: Larsseit-Bold;
+        font-size: 16px;
+        background: rgba(36, 39, 49, 1);
+        color: white;
+        border-radius: 14px;
+        height: 48px;
+        width: 177px;
+        transition: 0.2s ease-in !important;
+
+        &:active,
+        &:focus {
+          opacity: 1;
+          filter: none !important;
+          transition: 0.2s ease-in;
+        }
+
+        &:hover {
+          opacity: 0.6;
+          filter: none !important;
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+
+    .blue_img {
+      margin-top: -15px;
+      margin-bottom: 0px;
+      width: 265px;
+    }
+  }
+
+  .treasury_wrapper {
+    width: 600px;
+    margin: 40px auto 0 auto;
+    padding: 0;
+  }
+
+  .treasury_container {
+    margin: 40px auto 0 auto;
+    padding: 28px;
+    border: 1px solid rgba(42, 42, 42, 1);
+    border-radius: 16px;
+    width: 600px;
+
+    @include mq($until: 1267px) {
+      margin-left: 26px;
+    }
+
+    .earned_percent_pos {
+      font-size: 14px;
+      font-family: Larsseit-Bold;
+      color: #67dd6c !important;
+    }
+
+    .earned_percent_neg {
+      font-size: 14px;
+      font-family: Larsseit-Bold;
+      color: #ea3943 !important;
+    }
+
+    .earned_text {
+      margin-top: 2px;
+      margin-left: 3px;
+      font-size: 12px;
+      font-family: Larsseit-Regular;
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .treasury_header {
+      display: flex;
+      justify-content: space-between;
+
+      .treasury_title {
+        font-family: Larsseit-Bold;
+        font-size: 24px;
+      }
+
+      .treasury_total {
+        font-family: Larsseit-Bold;
+        font-size: 24px;
+        justify-content: flex-end;
+        text-align: right;
+        margin-bottom: 4px;
+      }
+    }
+
+    .treasury_graph {
+      width: 100%;
+      height: 200px;
+    }
+
+    .stats_container {
+      display: flex;
+      justify-content: space-between;
+
+      .stat_header {
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        margin-bottom: 2px;
+        margin-top: 32px;
+        text-align: center;
+      }
+
+      .stat_amount {
+        font-family: Larsseit-Regular;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+
+      .earned_percent_pos {
+        margin-left: 3px;
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        color: #67dd6c !important;
+      }
+
+      .earned_percent_neg {
+        margin-left: 3px;
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        color: #ea3943 !important;
+      }
+
+      .stat_button {
+        align-self: flex-end;
+        background: rgba(31, 31, 31, 1);
+        line-height: 19px;
+        height: 41px;
+        width: 100px;
+        border-radius: 10px;
+        font-family: Larsseit-Bold;
+        font-size: 14px;
+        color: white;
+        transition: 0.2s ease-in !important;
+
+        &:active,
+        &:focus {
+          opacity: 1;
+          filter: none !important;
+          transition: 0.2s ease-in;
+        }
+
+        &:hover {
+          opacity: 0.6;
+          filter: none !important;
+          transition: 0.2s ease-in;
+        }
+      }
+    }
+  }
+
+  .stake_DG_container {
+    width: 600px;
+    margin: 40px auto 0 auto;
+
+    @include mq($until: 1267px) {
+      margin-left: 26px;
+    }
+  }
+}
+
+.sub_profile {
+  max-width: 600px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+
+  @include mq($until: 1267px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 90px;
+    margin-left: 50px;
+    margin-top: 0px;
+    min-width: 600px;
+  }
+
+  @include mq($until: 499px) {
+    display: none;
+  }
+
+  .lower {
+    margin: 40px auto 0 auto;
+    height: fit-content;
+
+    @include mq($until: 1267px) {
+      margin: 40px 0 0 0;
+    }
+
+    .lower_button {
+      background: rgb(31, 31, 31);
+      color: white;
+      transition: 0.2s ease-in !important;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.6;
+        background: rgb(31, 31, 31) !important;
+        color: white !important;
+        filter: none !important;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    .lower_value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .DG_value {
+        font-family: Larsseit-Bold;
+        font-size: 41px;
+        margin-right: 12px;
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .price {
+      font-family: Larsseit-Bold;
+      font-size: 20px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5) !important;
+      margin-bottom: 16px;
+    }
+
+    .claim_DG {
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+
+    .see_all_rewards {
+      color: white;
+      cursor: pointer;
+      line-height: 27px;
+      text-align: center;
+    }
+  }
+}
+
+.lower {
+  padding: 28px;
+  border: 1px solid rgba(42, 42, 42, 1);
+  border-radius: 16px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+
+  .lower_xdg_amount {
+    font-family: Larsseit-Bold;
+    font-style: normal;
+    font-size: 41px;
+    line-height: 120%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .lower_xdg_usd {
+    font-family: Larsseit-Bold;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .lower_xdg_text {
+    display: block;
+    font-family: Larsseit-Bold;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 27px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 14px;
+  }
+
+  .lower_header {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .lower_header_two {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+  }
+
+  .lower_img {
+    width: 175px;
+    align-self: center;
+    margin-top: 0px;
+    margin-bottom: 14px;
+  }
+
+  .lower_img_gameplay {
+    width: 240px;
+    align-self: center;
+    margin-top: -8px;
+  }
+
+  .apy_text {
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0px;
+  }
+
+  .apy_percent {
+    font-family: Larsseit-Bold;
+    font-size: 41px;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-top: -4px;
+  }
+
+  .lower_text {
+    font-family: Larsseit-Regular;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .lower_button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+    width: 100%;
+    background: #006eff;
+    color: white;
+    border-radius: 10px !important;
+    height: 40px;
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    transition: 0.2s ease-in !important;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: #006eff;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      background: #006eff;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .governance_container {
+    display: flex;
+    margin-bottom: 20px;
+
+    .state_box {
+      background: rgba(31, 31, 31);
+      border-radius: 14px;
+      height: 48px;
+      min-width: 48px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+
+      .state {
+        color: #19c785 !important;
+        font-size: 10px;
+        font-family: Larsseit-bold;
+        text-transform: uppercase;
+        align-self: center;
+      }
+
+      .state_closed {
+        color: #ea3943 !important;
+        font-size: 10px;
+        font-family: Larsseit-bold;
+        text-transform: uppercase;
+        align-self: center;
+      }
+    }
+
+    .gov_right {
+      display: flex;
+      padding-left: 18px;
+
+      .gov_top {
+        font-family: Larsseit-Bold;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5) !important;
+        margin-bottom: 0px;
+      }
+
+      .gov_title {
+        font-family: Larsseit-Bold;
+        font-size: 14px;
+        margin-top: 2px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .button_span {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+
+    .button_gov {
+      padding: 0px;
+      align-self: center;
+      margin-bottom: 0px;
+      height: 41px;
+      border-radius: 10px;
+      font-family: Larsseit-Bold;
+      background: rgb(31, 31, 31);
+      font-size: 14px;
+      width: 47.5%;
+      color: white;
+      transition: 0.2s ease-in !important;
+
+      &:active,
+      &:focus {
+        opacity: 1;
+        filter: none !important;
+        transition: 0.2s ease-in;
+      }
+
+      &:hover {
+        opacity: 0.6;
+        filter: none !important;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+}
+
+.treasury_container_mobile {
+  margin: 48px 24px 48px 24px;
+  padding: 28px;
+  border: 1px solid rgba(42, 42, 42, 1);
+  border-radius: 16px;
+  width: calc(100% - 48px);
+
+  @media (min-width: 500px) {
+    display: none;
+  }
+
+  .earned_percent_pos {
+    font-size: 12px;
+    font-family: Larsseit-Bold;
+    color: #67dd6c !important;
+  }
+
+  .earned_percent_neg {
+    font-size: 12px;
+    font-family: Larsseit-Bold;
+    color: #ea3943 !important;
+  }
+
+  .earned_text {
+    margin-top: 2px;
+    margin-left: 3px;
+    font-size: 10px;
+    font-family: Larsseit-Regular;
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  .treasury_header {
+    display: flex;
+    justify-content: space-between;
+
+    .treasury_title {
+      font-family: Larsseit-Bold;
+      font-size: 20px;
+    }
+
+    .treasury_total {
+      font-family: Larsseit-Bold;
+      font-size: 20px;
+      justify-content: flex-end;
+      text-align: right;
+      margin-bottom: 4px;
+    }
+  }
+
+  .treasury_graph {
+    width: 100%;
+    height: 130px;
+  }
+
+  .stats_container {
+    margin-top: 32px;
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 0px 18px 0px;
+
+      .stat_header {
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        margin-bottom: 2px;
+        text-align: center;
+        display: flex;
+      }
+
+      .stat_amount {
+        font-family: Larsseit-Regular;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+
+      .earned_percent_pos {
+        margin-left: 3px;
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        color: #67dd6c !important;
+      }
+
+      .earned_percent_neg {
+        margin-left: 3px;
+        font-size: 14px;
+        font-family: Larsseit-Bold;
+        color: #ea3943 !important;
+      }
+
+      span {
+        align-items: center;
+      }
+    }
+
+    .stat_button {
+      align-self: flex-end;
+      background: rgba(31, 31, 31, 1);
+      line-height: 19px;
+      height: 41px;
+      width: 100px;
+      border-radius: 10px;
+      font-family: Larsseit-Bold;
+      font-size: 14px;
+      color: white;
+    }
+  }
+}

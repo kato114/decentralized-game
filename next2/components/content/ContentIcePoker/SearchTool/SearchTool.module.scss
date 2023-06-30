@@ -1,0 +1,437 @@
+@import 'styles/base.scss';
+
+.connect_metamask {
+  position: relative;
+  margin-top: 80px;
+}
+.unlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+
+  .unlock_img {
+    position: relative;
+    margin-bottom: 10px;
+
+    .search {
+      width: 210px;
+    }
+    .lock {
+      position: absolute;
+      right: 0px;
+      bottom: 10px;
+      width: 110px;
+    }
+  }
+
+  .unlock_title {
+    position: relative;
+    font-family: 'Larsseit-Bold';
+    font-weight: 800 !important;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .unlock_description {
+    position: relative;
+    font-family: 'Larsseit-Regular';
+    font-weight: 400 !important;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 20px;
+  }
+
+  .blue_button {
+    position: relative;
+    background-color: #006eff !important;
+    color: white !important;
+    font-family: 'Larsseit-Bold';
+    font-size: 17px;
+    line-height: 24px;
+    border-radius: 12px;
+    transition: 0.2s ease-in;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in;
+    }
+  }
+}
+
+.playerLookUp {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  .header {
+    .title {
+      font-family: 'Larsseit-ExtraBold';
+      font-weight: 800 !important;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    .filter_pills {
+      display: flex;
+      justify-content: center;
+      border: 1px solid #1f1f1f;
+      border-radius: 24px;
+      padding: 3px;
+      margin-top: 12px;
+
+      div {
+        font-family: 'Larsseit-Medium';
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: #fff;
+        background: transparent;
+        padding: 2px;
+        margin: 2px;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          background: #1f1f1f;
+          transition: 0.2s ease-in;
+        }
+      }
+
+      &.timeline div {
+        width: 90px;
+      }
+
+      &.delegation_status div {
+        width: 150px;
+      }
+
+      .active {
+        background: #1f1f1f;
+      }
+    }
+  }
+
+  .search_box {
+    position: relative;
+    height: 50px;
+    width: 500px;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    margin-top: 24px;
+
+    input {
+      position: relative;
+      padding-left: 20px;
+      width: calc(100% - 70px);
+      height: 50px;
+      font-family: 'Larsseit-Regular';
+      font-size: 15px;
+      line-height: 19px;
+      color: #ffffff;
+      border: none;
+      background-color: transparent;
+      caret-color: #006eff !important;
+
+      &:disabled {
+        color: rgba(255, 255, 255, 0.6) !important;
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+
+    .search {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      height: 30px;
+      padding: 7px 12px 6px !important;
+      background-color: #006eff !important;
+      color: white !important;
+      font-family: 'Larsseit-Regular';
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      border-radius: 10px;
+      transition: 0.2s ease-in;
+
+      &:active,
+      &:focus {
+        opacity: 1;
+        transition: 0.2s ease-in;
+      }
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+
+  .looking_for,
+  .no_result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    img {
+      position: relative;
+      margin-bottom: 10px;
+      width: 210px;
+    }
+
+    .title {
+      position: relative;
+      font-family: 'Larsseit-Bold';
+      font-weight: 800 !important;
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .description {
+      position: relative;
+      font-family: 'Larsseit-Regular';
+      font-weight: 400 !important;
+      font-size: 16px;
+      line-height: 21px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5) !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  .gameplay_table {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 80px !important;
+    margin-bottom: 50px !important;
+    transform: scale(1);
+
+    table {
+      position: relative;
+
+      thead {
+        th {
+          font-size: 17px !important;
+          font-family: 'Larsseit-Bold';
+          letter-spacing: 0.5px;
+          text-align: center !important;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+          cursor: pointer !important;
+        }
+      }
+
+      tbody {
+        position: relative;
+
+        tr {
+          display: flex;
+          align-items: center;
+          border-radius: 24px;
+          margin-bottom: 0px;
+          user-select: none;
+
+          td {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.5px;
+            padding: 15px 24px 15px 24px;
+            height: 70px;
+            font-size: 17px;
+            font-family: 'Larsseit-Bold';
+            color: rgba(255, 255, 255, 0.6) !important;
+
+            &:first-child {
+              color: #fff !important;
+            }
+          }
+
+          .user_info {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 200px;
+            position: relative;
+            height: 70px !important;
+            cursor: pointer;
+
+            h1 {
+              font-size: 18px;
+              font-family: 'Larsseit-Bold';
+              color: rgba(255, 255, 255, 0.6) !important;
+              text-decoration: underline;
+              margin-top: 0px;
+            }
+
+            img.avatar {
+              width: 40px;
+              height: 40px;
+              background-color: rgb(59, 59, 59);
+              border-radius: 50%;
+              margin-right: 16px;
+            }
+
+            .is_banned {
+              position: absolute;
+              top: 12px;
+              left: 44px;
+            }
+          }
+
+          .net_chips_score {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-family: 'Larsseit-Bold';
+            color: rgba(255, 255, 255, 0.6) !important;
+            width: 200px;
+
+            img {
+              position: relative;
+              width: 18px;
+              margin-left: 3px;
+            }
+          }
+
+          .tier {
+            position: relative;
+            width: 180px;
+
+            img {
+              position: relative;
+              width: 22px;
+              top: 7px;
+              margin-top: -10px;
+              margin-right: 15px;
+            }
+          }
+
+          button {
+            background: transparent !important;
+            color: #fff !important;
+            font-family: 'Larsseit-Light';
+            letter-spacing: 0.5px;
+            border: 2px solid rgba(255, 255, 255, 0.08) !important;
+            transition: 0.2s ease-in;
+
+            &:hover {
+              border: 2px solid rgba(255, 255, 255) !important;
+              transition: 0.2s ease-in;
+            }
+          }
+        }
+      }
+    }
+
+    .fixed {
+      width: 200px;
+
+      tbody {
+        tr {
+          width: 200px !important;
+          border-right: 2px solid rgba(255, 255, 255, 0.1);
+          border-bottom-right-radius: 0px !important;
+          border-top-right-radius: 0px !important;
+        }
+      }
+    }
+
+    .scroll {
+      cursor: pointer;
+      margin-top: 0px;
+      max-width: calc(100vw - 590px) !important;
+      overflow-x: scroll !important;
+
+      table {
+        width: 970px !important;
+      }
+
+      thead {
+        tr {
+          width: 970px !important;
+        }
+      }
+
+      tbody {
+        tr {
+          width: 970px !important;
+          border-bottom-left-radius: 0px !important;
+          border-top-left-radius: 0px !important;
+        }
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent !important;
+        transition: 0.2s ease-in !important;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: transparent !important;
+        transition: 0.2s ease-in !important;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        transition: 0.2s ease-in !important;
+      }
+
+      &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        background-size: 5px 20px !important;
+        transition: 0.2s ease-in !important;
+        border-radius: 36px !important;
+      }
+    }
+
+    @include mq($until: 1040px) {
+      margin-left: 30px !important;
+
+      table {
+        margin-bottom: 0px;
+      }
+
+      .fixed {
+      }
+
+      .scroll {
+        width: calc(100vw - 315px) !important;
+        margin-left: 0px;
+      }
+    }
+  }
+}

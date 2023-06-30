@@ -1,0 +1,188 @@
+.breakdown_modal {
+    width: 940px !important;
+    max-height: 560px !important;
+    padding: 40px 10px 25px 48px;
+
+    .close_icon {
+        cursor: pointer;
+        position: absolute;
+
+        left: 0px;
+        top: -50px;
+        background: #000000;
+        box-shadow: 0px 16px 32px rgb(0 0 0 / 24%);
+        border-radius: 24px !important;
+
+        .button_close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            background: black;
+            border-radius: 100%;
+            padding: 8px 10px 8px 10px;
+        }
+    }
+
+    .body {
+        .title {
+            h2 {
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            p {
+                text-align: center;
+                font-size: 18px;
+                font-family: "Larsseit-Medium";
+                letter-spacing: 0.5px;
+            }
+        }
+
+        .history {
+            margin-top: 25px;
+
+            .header {
+                display: flex;
+                color: #fff;
+                font-size: 18px;
+                font-family: "Larsseit-Medium";
+                letter-spacing: 0.5px;
+                text-align: center;
+            }
+
+            .content {
+                max-height: 390px;
+                color: #fff;
+                font-size: 18px;
+                font-family: "Larsseit-Medium";
+                letter-spacing: 0.5px;
+                text-align: center;
+                margin-top: 10px;
+                overflow: auto;
+
+                .row {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .address {
+                width: 150px;
+            }
+            .nfts {
+                display: flex;
+                justify-content: center;
+                width: 250px;
+                text-align: center;
+
+                .nft {
+                    position: relative;
+                    width: 36px;
+                    margin: 0px 4px;
+
+                    img {
+                        border-radius: 8px;
+                    }
+
+                    .rank {
+                        position: absolute;
+                        top: 20px;
+                        left: 3px;
+                        width: 13px;
+                        height: 13px;
+                        font-size: 7px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background: rgba(0, 0, 0, 0.7);
+                    }
+
+                    .bottomInfo {
+                        position: relative;
+                        font-size: 8px;
+                        color: #fff;
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 3px;
+
+                        img {
+                            width: 8px;
+                            margin-left: 1px;
+                            margin-top: -2px;
+                        }
+                    }
+                }
+            }
+            .iceEarned {
+                position: relative;
+                width: 150px;
+
+                img {
+                    position: absolute;
+                    width: 25px;
+                    top: 0px;
+                    left: 20px;
+                    margin-right: 10px;
+                }
+            }
+            .xpEarned {
+                position: relative;
+                width: 120px;
+
+                img {
+                    position: absolute;
+                    width: 27px;
+                    top: 1px;
+                    left: 25px;
+                    margin-right: 10px;
+                }
+            }
+            .tier {
+                position: relative;
+                width: 180px;
+
+                img {
+                    position: absolute;
+                    width: 22px;
+                    top: 7px;
+                    left: 30px;
+                    margin-top: -10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+.content::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+    transition: 0.2s ease-in;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+    background-size: 5px 20px;
+    border-radius: 36px;
+    transition: 0.2s ease-in;
+}
+
+.content:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.15);
+    background-size: 5px 20px;
+    transition: 0.2s ease-in;
+    border-radius: 36px;
+}

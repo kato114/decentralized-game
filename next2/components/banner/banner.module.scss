@@ -1,0 +1,21 @@
+.banner {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #006eff;
+    font-family: "Larsseit-Medium";
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    z-index: 12;
+}
+.none {
+    display: none;
+}

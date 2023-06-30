@@ -1,0 +1,393 @@
+@import "styles/base.scss";
+
+.lower {
+  padding: 28px;
+  border: 1px solid rgba(42, 42, 42, 1);
+  border-radius: 16px;
+  min-width: 285px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 60px;
+  height: 100%;
+
+  .lower_value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .DG_value {
+      font-family: Larsseit-Bold;
+      font-size: 41px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .price {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 16px;
+  }
+
+  .claim_DG {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .lower_header {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .lower_header_two {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+  }
+
+  .lower_img {
+    width: 175px;
+    align-self: center;
+    margin-top: 0px;
+    margin-bottom: 14px;
+  }
+
+  .apy_text {
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0px;
+  }
+
+  .stake_text {
+    font-family: Larsseit-Regular;
+    font-size: 12px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .apy_percent {
+    font-family: Larsseit-Bold;
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: -20px;
+    margin-top: -4px;
+
+    abbr {
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      position: relative;
+      top: -40px;
+    }
+  }
+
+  .lower_text {
+    font-family: Larsseit-Regular;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button_stake {
+    margin-top: 20px;
+    width: 47.5%;
+    background: #006eff;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    transition: 0.2s ease-in !important;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: #006eff !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      background: #006eff !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .lower_button {
+    margin-top: 20px;
+    width: 100%;
+    background: #006eff;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+  }
+
+  .lower_button {
+    background: rgb(31, 31, 31);
+    color: white;
+    transition: 0.2s ease-in !important;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: rgb(31, 31, 31) !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      background: rgb(31, 31, 31) !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .governance_container {
+    display: flex;
+    margin-bottom: 20px;
+
+    .state_box {
+      background: rgba(31, 31, 31);
+      border-radius: 14px;
+      height: 48px;
+      min-width: 48px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+
+      .state {
+        color: #19c785 !important;
+        font-size: 10px;
+        font-family: Larsseit-bold;
+        text-transform: uppercase;
+        align-self: center;
+      }
+
+      .state_closed {
+        color: #ea3943 !important;
+        font-size: 10px;
+        font-family: Larsseit-bold;
+        text-transform: uppercase;
+        align-self: center;
+      }
+    }
+
+    .gov_right {
+      display: flex;
+      padding-left: 18px;
+
+      .gov_top {
+        font-family: Larsseit-Bold;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.5) !important;
+        margin-bottom: 0px;
+      }
+
+      .gov_title {
+        font-family: Larsseit-Bold;
+        font-size: 14px;
+        margin-top: 2px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .button_span {
+    margin-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+
+    .button_gov {
+      padding: 0px;
+      align-self: center;
+      margin-bottom: 0px;
+      height: 41px;
+      border-radius: 10px;
+      font-family: Larsseit-Bold;
+      background: rgb(31, 31, 31);
+      font-size: 14px;
+      width: 47.5%;
+      color: white;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+
+  .contract_div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 60px;
+      border: 1px solid #2a2a2a;
+      border-radius: 16px;
+
+      img {
+        width: 25px;
+      }
+
+      .dg_input {
+        font-family: "Larsseit-Bold";
+        font-size: 24px;
+        letter-spacing: 0.5px;
+        background: transparent;
+        border: none;
+        margin-left: 5px;
+        text-align: left;
+        color: rgb(255, 255, 255) !important;
+      }
+
+      input:focus-visible {
+        border: none;
+        outline: none;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    .max_button {
+      position: absolute;
+      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 35px;
+      padding: 5px;
+      background: #1f1f1f;
+      border-radius: 8px;
+      font-family: "Larsseit-Light";
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      transition: 0.2s ease-in;
+
+      &:active,
+      &:focus {
+        color: #ffffff;
+        background: #1f1f1f;
+        opacity: 1;
+        transition: 0.2s ease-in;
+      }
+
+      &:hover {
+        color: #ffffff;
+        background: #1f1f1f;
+        opacity: 0.6;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+
+  .button_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+
+    .button,
+    .button_blue {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 42px;
+      padding: 5px;
+      margin-right: 0px;
+      background: #1f1f1f;
+      border-radius: 8px;
+      font-family: "Larsseit-Light";
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      transition: 0.2s ease-in;
+
+      img {
+        width: 22px;
+        margin-right: 10px;
+        margin-top: -1px;
+        background: transparent;
+      }
+
+      .arrowIcon {
+        width: 12px;
+        margin-left: 8px;
+      }
+
+      .nextIcon {
+        width: 15px;
+        margin-left: 8px;
+      }
+
+      &:active,
+      &:focus {
+        color: #ffffff;
+        opacity: 1;
+        transition: 0.2s ease-in;
+      }
+
+      &:hover {
+        color: #ffffff;
+        opacity: 0.6;
+        transition: 0.2s ease-in;
+      }
+    }
+
+    .button_blue {
+      background: #006eff;
+    }
+  }
+}

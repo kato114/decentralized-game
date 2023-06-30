@@ -1,0 +1,234 @@
+@import "styles/base.scss";
+
+.open_button {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  height: 100px;
+  width: 400px;
+  font-family: "Larsseit-Bold";
+  border-radius: 8px !important;
+  font-family: Larsseit-Bold !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 22px !important;
+}
+.delegate_modal {
+  width: 667px !important;
+  background: black !important;
+  border-radius: 24px !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  .top_buttons {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+
+      color: white;
+      cursor: pointer;
+      width: 109px;
+      height: 48px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .title {
+    font-family: Larsseit-Extrabold;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  .title2 {
+    margin-top: 10px;
+    font-family: Larsseit-Extrabold;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+  }
+
+  .body {
+    display: flex;
+    justify-content: center;
+
+    .greybox {
+      cursor: pointer;
+      width: 255px;
+      height: 255px;
+      background: #1f1f1f;
+      border-radius: 32px;
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 28px;
+    }
+    .input {
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      box-sizing: border-box;
+      border-radius: 16px;
+      font-family: "Larsseit-Bold";
+      width: 100%;
+      height: 80px;
+      padding: 20px 20px 20px 30px;
+      margin-bottom: 10px;
+      background: transparent;
+      font-size: 20px;
+      line-height: 32px;
+      color: white;
+    }
+    .enter_button {
+      margin-top: 24px;
+      margin-right: 0px;
+      background: #4a60de;
+      border-radius: 16px;
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      color: #ffffff;
+      height: 80px;
+      transition: 0.2s ease-in;
+
+      &:hover {
+        opacity: 0.6;
+        transition: 0.2s ease-in;
+      }
+    }
+    .balance {
+      margin-top: 32px;
+      font-family: Larsseit-ExtraBold;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: -0.7px;
+      color: #ffffff;
+    }
+    .card {
+      margin-top: 16px;
+      border: 1px solid #2a2a2a;
+      box-sizing: border-box;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      padding: 18px;
+
+      .logo {
+        margin-left: 40px;
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .text {
+          margin-left: 20px;
+          display: flex;
+          flex-direction: column;
+
+          .top_label {
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-size: 24px;
+            line-height: 33px;
+            color: #ffffff;
+          }
+          .bottom_label {
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-size: 18px;
+            line-height: 24px;
+            color: #ffffff;
+            opacity: 0.75;
+          }
+        }
+        .edit {
+          font-family: "Larsseit-Bold";
+          font-style: normal;
+          font-size: 24px;
+          line-height: 33px;
+          text-align: right;
+          color: #ffffff;
+          background: transparent;
+          height: 33px;
+          width: 201px;
+          border: 1px solid #2a2a2a;
+          box-sizing: border-box;
+          border-radius: 16px;
+          padding: 30px;
+        }
+      }
+    }
+
+    .update {
+      margin-top: 24px;
+      background: #1f1f1f;
+      border-radius: 16px;
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .done {
+      margin-top: 12px;
+      background: #000000;
+      font-family: "Larsseit-Bold";
+      font-style: normal;
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}

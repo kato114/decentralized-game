@@ -1,0 +1,103 @@
+@import "styles/base.scss";
+.main_right_panel {
+	display: flex;
+	align-items: center;
+
+	.metamask_button {
+		font-size: 18px;
+		position: relative;
+		background-color: #006eff !important;
+		color: white;
+		line-height: 24px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		border-radius: 16px;
+	}
+
+	.metamask_icon {
+		height: 24px;
+		margin-right: 8px;
+		margin-left: -8px;
+	}
+}
+
+.play_now_modal {
+	display: flex;
+	height: 64px;
+	width: 200px;
+	border-radius: 16px;
+	font-weight: 700;
+	font-size: 20px;
+	color: white;
+	margin-top: -8px !important;
+	margin-left: 16px !important;
+	background: #006EFF !important;
+	color: white !important;
+	font-size: 20px !important;
+	font-family: Larsseit-Bold;
+}
+
+@media (max-width: 499px) {
+	.play_now_modal {
+		display: none;
+	}
+	.connect_metamask_modal {
+    -ms-transform: scale(0.7, 0.7); /* IE 9 */
+    -webkit-transform: scale(0.7, 0.7); /* Safari */
+    transform: scale(0.7, 0.7);
+	}
+}
+
+.connect_metamask_modal {
+	width: 496px !important;
+	padding: 40px;
+
+	.button_close {
+		color: white;
+		cursor: pointer;
+		width: 36px;
+		height: 36px;
+		background: black;
+		border-radius: 100%;
+		padding: 8px 10px 8px 10px;
+	}
+
+	.title {
+		font-weight: 800;
+		font-size: 32px;
+		text-align: left;
+		letter-spacing: -0.7px;
+		padding-bottom: 24px;
+	}
+
+	.busd_button {
+		height: 90px;
+		border-radius: 16px;
+		font-weight: 700;
+		font-size: 24px;
+		color: white;
+		background: #006eff;
+		width: 100%;
+		line-height: 50px;
+	
+		&:hover {		
+			color: white;
+			background: #006eff;
+			filter: brightness(0.9) !important;
+		}
+	}
+
+	.subtitle {
+		font-size: 16px;
+		line-height: 22px;
+		color: rgba(255, 255, 255, 0.5) !important;
+		padding-top: 16px;
+	}
+
+	.subtitle_2 {
+		font-size: 16px;
+		line-height: 22px;
+		color: rgba(255, 255, 255, 0.5) !important;
+	}
+}

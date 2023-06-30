@@ -1,0 +1,56 @@
+@import "styles/base.scss";
+
+
+.play_now_modal_binance {
+	background: #F1CD50;
+	height: 64px;
+	width: 200px;
+	border-radius: 16px;
+	font-weight: 700;
+	font-size: 20px;
+	color: black;
+	margin-top: -6px;
+	margin-left: 16px;
+	border: 0px solid white;
+}
+
+.connect_metamask_modal {
+	width: 496px !important;
+	padding: 40px;
+
+	.button_close {
+		color: white;
+		cursor: pointer;
+	}
+
+	.title {
+		font-weight: 800;
+		font-size: 32px;
+		text-align: left;
+		letter-spacing: -0.7px;
+		padding-bottom: 24px;
+	}
+
+	.busd_button_binance {
+		background: #F1CD50;
+		height: 90px;
+		border-radius: 16px;
+		font-weight: 700;
+		font-size: 24px;
+		color: black;
+		border: 0px solid white;
+	}
+
+	.subtitle {
+		font-size: 16px;
+		line-height: 22px;
+		color: rgba(255, 255, 255, 0.5) !important;
+		padding-top: 16px;
+	}
+
+	.subtitle_2 {
+		font-size: 16px;
+		line-height: 22px;
+		color: rgba(255, 255, 255, 0.5) !important;
+	}
+}

@@ -1,0 +1,324 @@
+@import "styles/base.scss";
+
+.footer_container {
+  background: #121212;
+  border-top: 2px solid #353945;
+  margin-top: 0px;
+  position: relative;
+  z-index: 9;
+
+  .grid_container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 100px 72px 0 72px;
+    display: flex;
+    justify-content: space-between;
+
+    .cryptoWidgetSection {
+      margin-top: 100px;
+
+      @media screen and (max-width: 1200px) {
+        display: none !important;
+      }
+    }
+
+    .top_section {
+      .dg_section {
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+
+        .section1 {
+          display: flex;
+          justify-content: left;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          div {
+            font-size: 24px;
+            font-family: 'Larsseit-Regular';
+            color: #FFF;
+            line-height: 32px;
+            letter-spacing: 1px;
+            margin-left: 25px;
+            margin-top: 0px;
+          }
+        }
+
+        .section2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            font-size: 24px;
+            font-family: 'Larsseit-Regular';
+            color: #FFF;
+            letter-spacing: 0.8px;
+            opacity: 0.6;
+          }
+        }
+
+        .section3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          div {
+            font-size: 24px;
+            font-family: 'Larsseit-Regular';
+            letter-spacing: 0.8px;
+            opacity: 0.6;
+          }
+          .red {
+            color: #ea3943 !important;
+          }
+
+          .green {
+            color: #67dd6c !important;
+          }
+        }
+      }
+    }
+
+    .cryptoCom {
+      font-size: 24px;
+      font-family: 'Larsseit-Regular';
+      letter-spacing: 0.8px;
+      color: #376aaf;
+      margin-top: 24px;
+      margin-bottom: 85px;
+
+      img {
+        position: relative;
+        top: 7px;
+        margin-left: 3px;
+        margin-right: 3px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .grid_column {
+      width: 18%;
+
+      &:first-of-type {
+        @include mq($until: medium) {
+          width: 100%;
+          padding-top: 0;
+          border-top: none;
+        }
+      }
+
+      @include mq($until: medium) {
+        width: 100%;
+        padding-top: 32px;
+        border-top: 1px solid #353945;
+      }
+    }
+
+    .footer_header {
+      font-family: Larsseit-Bold;
+      font-size: 24px;
+      padding-bottom: 20px;
+      color: white;
+
+      @include mq($until: medium) {
+        padding-bottom: 0;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    .footer_link {
+      font-family: Larsseit-Regular;
+      font-size: 20px;
+      color: #777e91 !important;
+      padding-bottom: 4px;
+      min-width: 100px;
+      margin-bottom: 16px;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.9);
+      }
+
+      @include mq($until: medium) {
+        padding-bottom: 0;
+        margin-bottom: 24px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    .footer_text {
+      font-family: Larsseit-Regular;
+      font-size: 20px;
+      color: white !important;
+      padding-bottom: 4px;
+    }
+  }
+
+  .grid_newsletter {
+    display: flex;
+    flex-direction: column;
+
+    .footer_header {
+      font-family: Larsseit-Bold;
+      font-size: 24px;
+      padding-bottom: 20px;
+      color: white;
+    }
+
+    .footer_text {
+      font-family: Larsseit-Regular;
+      font-size: 20px;
+      color: white !important;
+      padding-bottom: 4px;
+    }
+  }
+
+  @include mq($until: extra-large) {
+    .grid_column {
+      width: 20%;
+    }
+    .grid_newsletter {
+      display: none;
+    }
+  }
+
+  @include mq($from: extra-large) {
+    .grid_newsletter_tablet {
+      display: none;
+    }
+  }
+
+  .grid_newsletter_tablet {
+    max-width: 1400px;
+    padding: 0px 72px 60px 72px;
+
+    .footer_header {
+      font-family: Larsseit-Bold;
+      font-size: 24px;
+      padding-bottom: 20px;
+      padding-top: 48px;
+      color: white;
+      border-top: 1px solid #353945;
+    }
+
+    .footer_text {
+      font-family: Larsseit-Regular;
+      font-size: 20px;
+      color: white !important;
+      padding-bottom: 4px;
+    }
+  }
+
+  .cookie_container {
+    border-top: 1px solid #353945;
+    padding: 32px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .copyright {
+      margin-bottom: 0;
+      color: #777e90;
+      font-size: 17px;
+      line-height: 29px;
+      font-family: Larsseit-Regular;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 29px;
+      font-family: Larsseit-Regular;
+      color: white;
+
+      .icon {
+        color: #777e91;
+        font-size: 20px;
+        margin-left: 12px;
+      }
+    }
+
+    .accept {
+      font-family: Larsseit-Bold;
+      font-size: 17px;
+      line-height: 29px;
+      color: #3772ff;
+      cursor: pointer;
+    }
+
+    @include mq($until: extra-large) {
+      margin: 0 72px;
+      width: calc(100% - 144px);
+    }
+  }
+
+  @include mq($until: medium) {
+    .grid_container {
+      flex-direction: column;
+      padding: 60px 30px 0 30px;
+    }
+
+    .grid_column {
+      width: 100%;
+    }
+
+    .grid_newsletter_tablet {
+      padding: 0px 30px 30px 30px;
+
+      .footer_header {
+        padding-top: 32px;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .footer_text {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .cookie_container_tablet {
+      padding: 24px 0;
+      border-top: 1px solid #353945;
+      display: flex;
+      justify-content: center;
+
+      .copyright {
+        font-size: 12px;
+        color: #777e90;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .input_placeholder {
+
+    .sign_up_newsletter {
+      background: #006eff;
+      color: white;
+      height: 48px;
+      padding: 12px 26px 12px 26px;
+      line-height: 24px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-family: Larsseit-Bold;
+      transition: 0.2s ease-in;
+
+      svg {
+        margin-left: 12px;
+      }
+
+      &:hover {
+        background: #006eff !important;
+        opacity: 0.6 !important;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+}

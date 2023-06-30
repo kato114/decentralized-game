@@ -1,0 +1,239 @@
+@import "styles/base.scss";
+
+.open_button {
+  background-color: #0d6efd !important;
+  color: white !important;
+  height: 43px;
+  border-radius: 10px !important;
+  width: 100%;
+}
+
+.check_eligibility {
+  margin-left: 8px !important;
+  align-items: center;
+  padding: 8px 16px;  
+
+  background: #1F1F1F !important;
+  border-radius: 12px;
+
+  font-family: Larsseit-Bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF !important;
+}
+
+.error_text {
+  font-family: Larsseit-Regular;
+  font-style: normal; 
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  color: #FFB5B5;
+  margin-top: 12px;
+}
+
+.check_mintable_modal {
+
+  width: 650px !important;  
+  background: black !important;
+  border-radius: 24px !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 36px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24);
+
+  .top_buttons {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-family: Larsseit-Bold;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+
+      color: white;
+      cursor: pointer;
+      width: 109px;
+      height: 48px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .title {
+    font-family: Larsseit-ExtraBold;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -0.7px;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;   
+    height: 75px;
+    margin-top: 16px;
+  }
+
+  .body_section {
+    margin-top: 32px;
+
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    .dg_plus {
+      font-family: Larsseit-Bold;
+      font-style: normal;   
+      font-size: 22px;
+      line-height: 37px;
+      color: #FFFFFF;
+      padding: 8px;
+    }
+
+    .dg_section {      
+      .dg_round_edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background: #090909;
+        border: 1px solid #2A2A2A;
+        box-sizing: border-box;
+        border-radius: 19px !important;
+    
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 37px;
+        color: #FFFFFF;
+        padding-left: 20.5px;
+        padding-right: 20.5px;
+        padding-top: 12.44px;
+        padding-bottom: 12.44px;
+        gap: 6px;
+    
+        .tooltip {
+          margin-top: -60px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 2.75px 8.25px;
+    
+          position: absolute;
+          font-size: 7.5px;
+          line-height: 9px;
+          color: #FFFFFF;
+          gap: 2.75px;
+    
+          background: #2A2A2A;
+          border-radius: 5.5px;
+  
+          font-family: Larsseit-Regular;
+          font-style: normal;        
+          font-size: 11px;
+          line-height: 15px;
+          text-align: center;
+        }
+  
+        .middle_dg {
+          font-family: Larsseit-Bold;
+          font-style: normal;
+          font-size: 22px;
+          line-height: 37px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      .dg_desc {
+        margin-top: 8px;
+        color: white;
+        font-family: Larsseit-Regular;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .dg_available {        
+        color: #67DD6C;        
+      }
+      .dg_insufficient {        
+        color: rgba(255, 255, 255, 0.5);
+      }
+      
+    }
+  }
+
+  .buttons {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .primary {
+      position: relative;
+      height: 90px;
+      background: #006EFF;
+      font-family: Larsseit-Regular;
+      font-style: normal;        
+      font-size: 22px;
+      letter-spacing: 0.8px;
+      line-height: 33px;
+      text-align: center;
+      color: #FFFFFF;
+      background: #006EFF;
+      border-radius: 16px;
+
+      img {
+        position: absolute;
+        left: 40px;
+        bottom: 27px;
+        margin-right: 24px;
+        width: 38px;
+      }
+    }
+  }
+}

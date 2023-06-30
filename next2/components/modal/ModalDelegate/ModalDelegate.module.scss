@@ -1,0 +1,489 @@
+@import 'styles/base.scss';
+
+.open_button {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  height: 43px;
+  width: calc(50% - 8px) !important;
+  font-family: Larsseit-Bold;
+  font-size: 14px;
+  border-radius: 10px !important;
+  font-family: Larsseit-Bold !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+
+.open_button_fullWidth {
+  background-color: #1f1f1f !important;
+  color: white !important;
+  height: 43px;
+  width: calc(100%) !important;
+  font-family: Larsseit-Bold;
+  font-size: 14px;
+  border-radius: 10px !important;
+  font-family: Larsseit-Bold !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+}
+
+.new_delegation {
+  width: 818px !important;
+}
+
+.redelegation {
+  width: 480px !important;
+  height: 454px !important;
+  color: white !important;
+
+  .redelegation_body {
+    display: flex;
+    flex-direction: column;
+
+    .redelegate_title {
+      margin-bottom: 8px;
+      font-size: 32px;
+      line-height: 43px;
+      text-align: center;
+    }
+
+    .redelegation_description {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 55px;
+      text-align: center;
+
+      a {
+        color: #1e70bf;
+        cursor: pointer;
+
+        &:hover {
+          color: #376aaf;
+        }
+      }
+    }
+
+    .card_area_body {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      .card {
+        position: relative;
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 37px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        width: 160px;
+        height: 62px;
+        background: #090909;
+        border: 1px solid #2a2a2a;
+        box-sizing: border-box;
+        border-radius: 14px;
+        margin-bottom: 6px;
+
+        .info {
+          position: absolute;
+          top: -15px;
+          font-family: Larsseit-Regular;
+          padding: 2.8px 11.7px;
+          background: #2a2a2a;
+          border-radius: 5.6px;
+          font-style: normal;
+          font-size: 15px;
+          line-height: 21px;
+        }
+
+        .img_card1 {
+          width: 18px;
+        }
+        .img_card2 {
+          width: 18px;
+        }
+      }
+    }
+  }
+
+  .button_redelegate {
+    background: #006eff !important;
+    border-radius: 16px;
+    font-family: Larsseit-Bold;
+    font-style: normal;
+    font-size: 24px !important;
+    line-height: 33px;
+    text-align: center;
+    color: #ffffff;
+    margin: 40px 0 0;
+    height: 91px;
+    width: 100%;
+    color: white !important;
+
+    :hover {
+      background: #006eff !important;
+      color: white !important;
+    }
+  }
+}
+
+.button_trigger_redelegation {
+  background: #006eff !important;
+  border-radius: 10px !important;
+  font-family: Larsseit-Bold;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 !important;
+  color: white !important;
+  width: 100%;
+
+  :hover {
+    background: #006eff !important;
+    color: white !important;
+  }
+}
+
+.delegate_modal {
+  background: black !important;
+  border-radius: 16px !important;
+  padding:40px;
+
+  .top_buttons {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      font-family: Larsseit-Bold;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+
+      color: white;
+      cursor: pointer;
+      width: 109px;
+      height: 48px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .delegate_container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+
+    .wear_box {
+      .wear_box_purple {
+        width: 286px;
+        height: 286px;
+        margin-top: 42px;
+        border-radius: 16px;
+        img {
+          width: 100%;
+          border-radius: 16px;
+        }
+      }
+      .card_body {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 16px;
+
+        .card {
+          display: flex;
+          align-items: center;
+
+          padding-left: 12px;
+          padding-right: 12px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          border: 1px solid #2a2a2a;
+          box-sizing: border-box;
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+          border-radius: 20px;
+
+          font-family: Larsseit-Regular;
+          font-style: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: #ffffff;
+
+          .img_card {
+            margin-left: 4px;
+            width: 12px;
+          }
+        }
+      }
+
+      .wear_box_pink {
+        width: 241px;
+        height: 241px;
+        margin-top: 48px;
+        border-radius: 16px;
+
+        font-family: Larsseit;
+        font-style: normal;
+      }
+    }
+  }
+
+  .wear_box_right {
+    width: 384px;
+
+    .main {
+      margin-right: 32px;
+
+      .header {
+        font-family: Larsseit-ExtraBold;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 33px;
+        letter-spacing: -0.7px;
+      }
+      .benefit_area {
+        margin-top: 24px;
+
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffffff;
+      }
+      .benefit_list {
+        margin-top: -10px !important;
+        margin-left: -10px !important;
+        font-family: Larsseit-Regular;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+        opacity: 0.75;
+      }
+      .price_area {
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+
+        .profit_label {
+          margin-bottom: 22px;
+        }
+
+        .address_label {
+          margin-top: 12px;
+          margin-bottom: 12px;
+        }
+
+        .card_area {
+          display: flex;
+          align-items: baseline;
+          gap: 6px;
+
+          .card_area_body {
+            .card {
+              position: relative;
+              font-family: Larsseit-Bold;
+              font-style: normal;
+              font-size: 16px;
+              line-height: 27px;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 5px;
+
+              width: 115px;
+              height: 45px;
+              background: #090909;
+              border: 1px solid #2a2a2a;
+              box-sizing: border-box;
+              border-radius: 14px;
+              margin-bottom: 6px;
+
+              .info {
+                position: absolute;
+                top: -15px;
+                font-family: Larsseit-Regular;
+                padding: 2.8px 8.4px;
+                background: #2a2a2a;
+                border-radius: 5.6px;
+                font-style: normal;
+                font-size: 11.2px;
+                line-height: 15px;
+              }
+
+              .img_card1 {
+                width: 18px;
+              }
+              .img_card2 {
+                width: 18px;
+              }
+              .img_card3 {
+                margin-left: 4px;
+                width: 18px;
+                height: 11px;
+              }
+            }
+            .inputcard {
+              width: 100%;
+              position: relative;
+              font-family: Larsseit-Bold;
+              font-style: normal;
+              font-size: 16px;
+              line-height: 27px;
+
+              display: flex;
+              align-items: center;
+              width: 100%;
+              height: 58px;
+              background: transparent;
+              border: 1px solid #2a2a2a;
+              box-sizing: border-box;
+              border-radius: 14px;
+              margin-bottom: 6px;
+              border: 1px solid #2a2a2a;
+              padding: 10px 24px;
+
+              .input {
+                background: transparent;
+                border: none;
+                outline: none;
+                margin-left: 14.25px;
+                color: white;
+                font-family: Larsseit-Bold;
+                width: 100%;
+              }
+            }
+            .description {
+              font-family: Larsseit-Regular;
+              font-style: normal;
+              font-size: 10px;
+              line-height: 14px;
+              text-align: center;
+              color: rgba(255, 255, 255, 0.5);
+            }
+            .network {
+              font-family: Larsseit-Regular;
+              font-style: normal;
+              font-size: 8px;
+              line-height: 11px;
+              text-align: center;
+              color: rgba(255, 255, 255, 0.5);
+            }
+            .plusIcon {
+              font-family: Larsseit-Bold;
+              font-style: normal;
+              font-size: 16px;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+
+    .button_area {
+      margin-top: 16px;
+      margin-bottom: 12px;
+
+      display: flex;
+      justify-content: left;
+      gap: 8px;
+
+      .button_upgrade {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Larsseit-Bold !important;
+        font-style: normal !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        height: 48px;
+        width: 113.17px;
+        background: #006eff;
+        border-radius: 10px;
+        text-align: center;
+        color: #ffffff;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .button_close {
+        display: flex;
+        justify-content: center;
+        flex: auto;
+        align-items: center;
+        height: 48px;
+        background: #2a2a2a;
+        border-radius: 10px;
+
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+
+    .delegateInfo {
+      margin-top: 12px;
+      font-family: Larsseit-Regular;
+      font-style: normal;
+      font-size: 11px;
+      line-height: 15px;
+      color: #ffb5b5;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .open_button {
+    font-size: 13px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+}
+
+@include mq($until: medium) {
+  .open_button {
+    font-size: 15px !important;
+    display: none !important;
+  }
+  .open_button_fullWidth {
+    display: none !important;
+  }
+}

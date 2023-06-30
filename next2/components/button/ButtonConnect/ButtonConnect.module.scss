@@ -1,0 +1,60 @@
+@import "styles/base.scss";
+
+.main_right_panel {
+  display: flex;
+  align-items: center;
+
+  .metamask_button {
+    font-size: 18px;
+    position: relative;
+    background-color: #006eff !important;
+    color: white;
+    line-height: 24px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    transition: 0.2s ease-in;
+
+    &.binance_top {
+      background-color: #f1cd50;
+      color: black;
+      margin-top: 12px;
+    }
+
+    // AMNESIA_COMMENT: amnesia_button class should be removed after we are done with amnesia
+    &.amnesia_button {
+      background-color: #9e1869 !important;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .metamask_icon {
+    height: 24px;
+    margin-right: 8px;
+    margin-left: -8px;
+  }
+
+  .get_metamask {
+    color: white;
+    font-family: Larsseit-Bold;
+    margin-left: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    user-select: none;
+
+    &:hover {
+      color: white;
+      filter: brightness(0.9);
+    }
+  }
+}

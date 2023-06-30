@@ -1,0 +1,388 @@
+@import 'styles/base.scss';
+
+.wearable_button {
+  width: 100%;
+  height: 34px;
+  font-family: Larsseit-Bold;
+  font-size: 12px !important;
+  border-radius: 8px !important;
+  background: #006EFF !important;
+  color: white !important;
+  line-height: 15px;
+  margin: 0 5px;
+}
+
+.mintable_modal {
+  width: 818px !important;
+  height: 515px !important;
+  padding: 40px 56px;
+  font-family: Larsseit-Regular;
+
+  .modal_wrapper {
+    .button_close {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      background: #000000;
+      border-radius: 50%;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .mint_wrapper {
+    color: white;
+    display: flex;
+    gap: 24px;
+  }
+
+  .mint_box {
+    .mint_box_questionmark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 332px;
+      top: 66px;
+
+      background: #1a1a1a;
+      /* Outline Stroke */
+
+      border: 1px solid #2a2a2a;
+      box-sizing: border-box;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.12);
+      border-radius: 93px;
+    }
+    .mint_box_mark {
+      position: absolute;
+      margin-left: 70px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 9px 12px 9px 15px;
+
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      box-sizing: border-box;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+      border-radius: 93px;
+
+      .img_card {
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+      }
+    }
+
+    .mint_box_purple {
+      width: 286px;
+      height: 286px;
+      margin-top: 42px;
+      //background: radial-gradient(68.68% 68.68% at 50% 50%, #AD86FF 0%, #622DF8 100%);
+      border-radius: 16px;
+    }
+
+    .card_body {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+
+      .card {
+        display: flex;
+        align-items: center;
+
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin: 0 8px;
+
+        border: 2px solid #2a2a2a;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+
+        font-family: Larsseit-Bold;
+        font-size: 12px;
+        line-height: 16px;
+        color: #ffffff;
+
+        .img_card {
+          margin-left: 3px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .mint_box_pink {
+      width: 241px;
+      height: 241px;
+      margin-top: 42px;
+      //background: radial-gradient(68.68% 68.68% at 50% 50%, #ff81db 0%, #fd32c2 100%);
+      border-radius: 16px;
+
+      font-family: Larsseit-Regular;
+      font-style: normal;
+    }
+  }
+
+  .mint_box_right {
+    padding-left: 16px;
+
+    .header {
+      font-size: 24px;
+      line-height: 33px;
+      font-family: Larsseit-Medium;
+      font-weight: bold;
+      letter-spacing: -0.7px;
+    }
+    .benefit_area {
+      margin-top: 24px;
+      font-family: 'Larsseit-Bold';
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: #ffffff;
+
+      .benefit_list {
+        margin-top: -10px !important;
+        margin-left: -10px !important;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+        opacity: 0.75;
+      }
+    }
+
+    .type_area {
+      margin-top: 24px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: #ffffff;
+
+      .tabs {
+        margin-top: 12px;
+        margin-bottom: 18px;
+        border: 1px solid #2a2a2a;
+        border-radius: 100px;
+        padding: 0 6px;
+
+        a {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 14px;
+          padding: 6px 12px !important;
+          line-height: 16px;
+          font-family: Larsseit-Bold;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+
+        :global {
+          .active {
+            background: #1f1f1f;
+            color: white;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+
+            &:hover {
+              color: white;
+              background: #444343 !important;
+            }
+          }
+        }
+      }
+    }
+    .price_area {
+      font-family: Larsseit-Bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+
+      .card_area {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+
+        margin-bottom: 25px;
+        margin-top: 12px;
+        gap: 6px;
+
+        .card_area_body {
+          position: relative;
+          span {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 11px;
+            color: white;
+            font-size: 8px;
+            font-family: Larsseit-Regular;
+            background: #2a2a2a;
+            padding: 2px 6px;
+            border-radius: 4px;
+          }
+
+          .card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 120px;
+            height: 45px;
+            background: #090909;
+            border: 1px solid #2a2a2a;
+            box-sizing: border-box;
+            border-radius: 14px;
+            margin-bottom: 6px;
+            font-family: 'LARSSEIT-MEDIUM';
+            font-size: 16px;
+
+            .img_card1 {
+              margin-left: 4px;
+              width: 14px;
+              height: 14px;
+            }
+            .img_card2 {
+              margin-left: 5px;
+              width: 18px;
+              height: 18px;
+            }
+            .img_card3 {
+              margin-left: 4px;
+              width: 18px;
+              height: 11px;
+            }
+          }
+          .description {
+            font-family: Larsseit-Regular;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+          }
+          .network {
+            font-family: Larsseit-Regular;
+            font-size: 8px;
+            line-height: 11px;
+            text-align: center;
+            color: #509bff;
+          }
+          .plusIcon {
+            font-family: Larsseit-Regular;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 27px;
+          }
+        }
+      }
+    }
+
+    .button_area {
+      display: flex;
+      justify-content: flex-start;
+
+      .button_upgrade {
+        width: fit-content;
+        height: 48px;
+        background: #006eff;
+        border-radius: 10px;
+        margin-right: 8px;
+
+        font-family: Larsseit-Regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .button_close {
+        width: 141px;
+        height: 48px;
+        background: #2a2a2a;
+        border-radius: 10px;
+
+        font-family: Larsseit-Regular;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .dg_image {
+    width: 60px;
+    margin-top: 18px;
+    align-self: center;
+  }
+
+  .subtitle_1 {
+    align-self: center;
+    font-size: 24px;
+    font-family: Larsseit-Bold;
+    margin-top: 12px;
+  }
+
+  .subtitle_2 {
+    align-self: center;
+    font-size: 14px;
+    font-family: Larsseit-Bold;
+    opacity: 0.75;
+  }
+
+  .row_title {
+    font-size: 18px;
+    font-family: Larsseit-Bold;
+    margin-top: 18px;
+  }
+
+  .row_subtitle {
+    font-size: 14px;
+    font-family: Larsseit-Bold;
+    opacity: 0.75;
+  }
+
+  .learn_button {
+    background: #2b2b2b;
+    color: white;
+    font-size: 18px;
+    font-family: Larsseit-Bold;
+    height: 54px;
+    border-radius: 12px;
+    width: 142px;
+  }
+
+  .buy_button:focus,
+  .learn_button:focus {
+    box-shadow: none;
+    border: 0px solid black;
+  }
+}

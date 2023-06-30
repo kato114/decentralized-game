@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  api:
+    container_name: api
+    image: decentralgames-api:latest
+    restart: always
+    build:
+      context: .
+      args:
+        NODE_ENV: 'localhost'
+
+    # Fill these out with the connection strings of the ENV desired
+    #    environment:
+    #      REDIS_CONNECTION_STRING: ''
+    #      DB_CONNECTION_STRING: ''
+
+    ports:
+      - "5000:5000"

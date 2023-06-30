@@ -1,0 +1,68 @@
+{
+  "navMenu": {
+    "PLAY": "Play",
+    "DAO": "DAO",
+    "OFFERINGS": "Offerings",
+    "EVENTS": "Events",
+    "NEWS_BLOG": "News & Blog",
+    "DOCS": "Docs",
+    "MYACCOUNT": "My Account"
+  },
+
+  "Home": {
+    "PLAY": "Play",
+    "ANDOWN": "(and own)",
+    "FIRSTEVER": "the first ever metaverse casino",
+    "YOUAREHOUSE": "With $DG, you are the house: You control the profits, vote on new games, and earn money back directly by playing",
+    "INFO": "Info",
+    "LEARNMORE": "Learn More",
+    "PLAYNOW": "Play Now",
+
+    "PLAYTOEARN": "Play to Earn",
+    "PLAY_GAMES_META": "Play games in the metaverse and earn $DG token win or lose. Get up to 50% of your expected losses back in $DG.",
+    "GAMES": "Games",
+    "SEEGAMES": "See Games",
+    "EARNAPY": "Earn APY%",
+    "STAKE_DG_GOVERNANCE": "Stake $DG in governance and earn up to 40% in yield rewards.",
+    "VOTE_IN_THE_DAO": "Vote in the DAO",
+    "BE_THE_HOUSE": "(Be The House)",
+    "WITH_THE_DG_DAO": "With the $DG DAO, you own the casino. Control the profits, vote for new games, and decide on feature proposals.",
+    "EXPLORER": "Explore",
+    "EXPLORER_THREASURY": "Explore Treasury",
+    "OUR_PARTNERS": "Our Partners",
+    "HOW_TO_START_DG": "How to start with $DG",
+    "GET_STARTED": "Get Started",
+    "START_HERE": "Start Here",
+    "JOIN_OUR_COMMUNITY": "Join our community!"
+  },
+
+  "Footer": {
+    "TOKEN": "Token",
+    "TREASURY": "Treasury",
+    "GOVERNANCE": "Governance",
+    "DAOHOME": "DAO Home",
+    "GAMEPLAY": "Gameplay",
+    "LIQUDITY": "Liquidity",
+
+    "PLAY": "Play",
+    "GAMES": "Games",
+    "CASINO": "Casino",
+    "LEADERBOARD": "Leaderboard",
+
+    "SHOP": "Shop",
+    "NFTS": "NFTs",
+    "DCL_SHOPS": "DCL Shops",
+    "EVENTS": "Events",
+    "ALL_EVENTS": "All Events",
+    "PARTNER_SHIP": "Partnerships",
+
+    "NEWS": "News",
+    "BLOG": "Blog",
+    "JOIN_OUR_NEWS_LETTER": "Join Our Newsletter!",
+    "SUBSCRIBE_TO_OUR_NEWSLETTER": "Subscribe to our newsletter to stay up to date with our weekly updates.",
+    "COPYRIGHT_2021": "Copyright © 2021 Web4 LTD. All rights reserved",
+
+    "SIGNUP_FOR_SUBSTACK": "Sign Up For Substack",
+    "WE_USE_CLLOKIES": "We use cookies to create a better experience."
+  }
+}

@@ -1,0 +1,181 @@
+.career_section {
+    margin: auto;
+    padding-bottom: 50px;
+    width: 880px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 160px;
+        }
+
+        p {
+            margin-top: 20px;
+            margin-bottom: 65px;
+            font-size: 48px;
+            line-height: 58px;
+            letter-spacing: -0.7px;
+            color: #fcfcfd;
+            font-family: "Larsseit-ExtraBold";
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+
+        table {
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+
+            tbody {
+                position: relative;
+
+                tr {
+                    display: flex;
+                    align-items: center;
+                    border-radius: 24px;
+                    margin-bottom: 3px;
+
+                    td {
+                        padding: 15px 24px 15px 24px !important;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .position {
+                    padding-left: 40px !important;
+                }
+            }
+
+            .position {
+                width: 37%;
+                padding-left: 50px;
+                text-align: left;
+                justify-content: left;
+
+                a {
+                    color: #fff;
+                    text-decoration: underline;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .location {
+                width: 21%;
+            }
+
+            .team {
+                width: 21%;
+            }
+
+            .listing {
+                width: 21%;
+
+                button {
+                    background: transparent !important;
+                    color: #fff !important;
+                    font-family: "Larsseit-Light";
+                    letter-spacing: 0.5px;
+                    border: 2px solid rgba(255, 255, 255, 0.08) !important;
+                    transition: 0.2s ease-in;
+
+                    &:hover {
+                        border: 2px solid rgba(255, 255, 255) !important;
+                        transition: 0.2s ease-in;
+                    }
+                }
+            }
+        }
+
+        .no_listing {
+            margin-top: 50px;
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 0px;
+
+        .title {
+            img {
+                width: 120px;
+            }
+
+            p {
+                font-size: 32px;
+                line-height: 36px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .container {
+            max-width: 100vw !important;
+            overflow-x: scroll !important;
+
+            table {
+                width: 700px;
+
+                thead {
+                    tr {
+                        th {
+                            font-size: 15px !important;
+                            line-height: 18px;
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        display: flex;
+                        align-items: center;
+                        border-radius: 18px;
+                        margin-bottom: 3px;
+
+                        td {
+                            font-size: 15px !important;
+                            padding: 0px 18px 0px 18px !important;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+
+                    .position {
+                        padding-left: 40px !important;
+                    }
+
+                    .listing {
+                        button {
+                            padding: 10px 8px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

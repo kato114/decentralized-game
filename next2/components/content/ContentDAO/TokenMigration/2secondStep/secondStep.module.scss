@@ -1,0 +1,276 @@
+.main_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+
+    .title {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        h1 {
+            font-size: 24px;
+            line-height: 32px;
+            font-family: "Larsseit-ExtraBold";
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            font-family: "Larsseit-Regular";
+            color: rgba(255, 255, 255, 0.5) !important;
+            margin-top: 5px;
+            text-align: center;
+        }
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+
+        .box_div {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 340px;
+            height: 230px;
+            margin: 40px 12px 0px 12px;
+            padding: 28px;
+            border: 1px solid #2a2a2a;
+            border-radius: 16px;
+
+            .box_title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 24px;
+                    height: 22px;
+                    margin-right: 8px;
+                }
+                h1 {
+                    font-size: 20px;
+                    line-height: 27px;
+                    font-family: "Larsseit-Bold";
+                    letter-spacing: 0.5px;
+                    margin-top: 0px;
+                }
+            }
+
+            .center_content {
+                position: relative;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 41px;
+                    font-family: "Larsseit-Bold";
+                    color: #fff;
+
+                    img {
+                        width: 40px;
+                        margin-left: 13px;
+                        margin-top: -3px;
+                    }
+                }
+
+                p {
+                    margin-top: 5px;
+                    text-align: center;
+                    font-size: 20px;
+                    font-family: "LARSSEIT-MEDIUM";
+                    color: rgba(255, 255, 255, 0.5) !important;
+                }
+            }
+
+            .center_ready_content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: -15px;
+
+                p {
+                    font-size: 14px;
+                    color: rgba(255, 255, 255, 0.5) !important;
+                    font-family: "Larsseit-Medium";
+                    text-align: center;
+                }
+
+                img {
+                    width: 48px;
+                }
+            }
+
+            .button_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 42px;
+                    padding: 5px;
+                    margin-right: 0px;
+                    background: #1f1f1f;
+                    border-radius: 8px;
+                    font-family: "Larsseit-Light";
+                    letter-spacing: 0.8px;
+                    color: #ffffff;
+                    transition: 0.2s ease-in;
+
+                    img {
+                        width: 22px;
+                        margin-right: 10px;
+                        margin-top: -1px;
+                        background: transparent;
+                    }
+
+                    .arrowIcon {
+                        width: 12px;
+                        margin-left: 8px;
+                    }
+
+                    .nextIcon {
+                        width: 15px;
+                        margin-left: 8px;
+                    }
+
+                    &:active,
+                    &:focus {
+                        color: #ffffff;
+                        background: #1f1f1f;
+                        opacity: 1;
+                        transition: 0.2s ease-in;
+                    }
+
+                    &:hover {
+                        color: #ffffff;
+                        background: #1f1f1f;
+                        opacity: 0.6;
+                        transition: 0.2s ease-in;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .content {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .title {
+            h1 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+
+        .content {
+            .box_div {
+                padding: 28px 18px;
+                width: calc(100% - 20px) !important;
+
+                .box_title {
+                    img {
+                        width: 20px;
+                        height: 19px;
+                    }
+                    h1 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .content {
+            .box_div {
+                padding: 28px 18px;
+                width: calc(100% - 20px) !important;
+
+                .box_title {
+                    img {
+                        width: 18px;
+                        height: 17px;
+                    }
+                    h1 {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

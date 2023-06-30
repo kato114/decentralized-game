@@ -1,0 +1,509 @@
+@import "styles/base.scss";
+
+.overview_container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 90px;
+    border-right: 1px solid #2a2a2a;
+    padding-top: 53px;
+    padding-left: 24px;
+    min-height: calc(100vh - 110px);
+
+    @include mq($until: 1267px) {
+        padding-bottom: 0;
+        border-right: 0px solid white;
+    }
+
+    @include mq($until: 499px) {
+        // display: none;
+    }
+
+    .container_left {
+        padding-top: 20px;
+        margin: 0 auto;
+        min-width: 580px;
+
+        @include mq($until: 1267px) {
+            margin-left: 26px;
+        }
+
+        .welcome_text {
+            font-family: "Larsseit-Regular";
+            font-size: 20px;
+            color: rgba(255, 255, 255) !important;
+            margin-bottom: 0px;
+        }
+
+        .dashboard_text {
+            font-family: "Larsseit-ExtraBold";
+            font-size: 32px;
+            letter-spacing: -0.7px;
+            color: rgba(255, 255, 255) !important;
+            margin-top: 0px;
+        }
+    }
+
+    .stats_container {
+        margin: 32px auto 0 auto;
+        padding: 28px 40px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), #000000;
+        border: 1px solid #2a2a2a;
+        box-sizing: border-box;
+        border-radius: 16px;
+        width: 580px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq($until: 1267px) {
+            margin-left: 26px;
+        }
+
+        .title {
+            font-family: "Larsseit-Bold";
+            font-size: 20px;
+            line-height: 27px;
+            color: rgba(255, 255, 255) !important;
+            margin-bottom: 0px;
+        }
+
+        .filter_pills {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #1f1f1f;
+            border-radius: 24px;
+            padding: 3px;
+            margin-top: 12px;
+
+            div {
+                font-family: "Larsseit-Medium";
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: #fff;
+                background: transparent;
+                padding: 2px;
+                margin: 2px;
+                border-radius: 24px;
+                cursor: pointer;
+                transition: 0.2s ease-in;
+
+                &:hover {
+                    background: #1f1f1f;
+                    transition: 0.2s ease-in;
+                }
+            }
+
+            &.timeline div {
+                width: 90px;
+            }
+
+            &.delegation_status div {
+                width: 150px;
+            }
+
+            .active {
+                background: #1f1f1f;
+            }
+        }
+
+        .stats_info {
+            display: flex;
+            margin-top: 15px;
+            margin-bottom: 10px;
+
+            .stats_box {
+                position: relative;
+                margin-left: 10px;
+                margin-right: 10px;
+                flex: 1;
+                text-align: center;
+
+                .stats_img {
+                    position: relative;
+                    top: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .background {
+                        width: 35px;
+                    }
+
+                    .leaderboard_img {
+                        position: absolute;
+                        top: 7px;
+                        width: 17px;
+                    }
+
+                    .chips_img {
+                        position: absolute;
+                        top: 8px;
+                        width: 19px;
+                    }
+
+                    .challenges_img {
+                        position: absolute;
+                        top: 8px;
+                        width: 19px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                    }
+                }
+
+                .stats_balance {
+                    border: 1px solid #2a2a2a;
+                    border-radius: 14px;
+                    width: 120px;
+                    height: 54px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .title {
+                        display: flex;
+                        justify-content: center;
+                        gap: 4px;
+                        font-family: "Larsseit-Regular";
+                        font-size: 10px;
+                        line-height: 14px;
+                        color: rgba(255, 255, 255, 0.5) !important;
+                        margin-bottom: 0px;
+                    }
+
+                    .amount {
+                        font-family: "Larsseit-Bold";
+                        font-size: 15px;
+                        line-height: 22px;
+                        color: #ffffff;
+
+                        abbr {
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .second_container {
+        position: relative;
+        margin: 40px auto 0 auto;
+        width: 580px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq($until: 1267px) {
+            margin-left: 26px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 270px;
+            min-width: 270px;
+            padding: 28px;
+            border: 1px solid rgba(42, 42, 42, 1);
+            border-radius: 16px;
+
+            .title {
+                font-family: "Larsseit-Regular";
+                font-size: 20px;
+                color: rgba(255, 255, 255) !important;
+                margin-bottom: 0px;
+            }
+
+            p {
+                font-family: "Larsseit-Regular";
+                font-size: 12px;
+                line-height: 20px;
+                text-align: center;
+                color: rgba(255, 255, 255) !important;
+                margin-top: 0px;
+                margin-bottom: 20px;
+            }
+
+            .grey_button {
+                font-family: "Larsseit-Bold";
+                font-size: 14px;
+                width: 100%;
+                background: rgb(31, 31, 31);
+                color: white;
+                transition: 0.2s ease-in !important;
+                border-radius: 10px;
+                line-height: 20px;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    opacity: 0.6;
+                    background: rgb(31, 31, 31) !important;
+                    color: white !important;
+                    filter: none !important;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+
+        .get_wearable {
+            img {
+                width: 178px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .player_leaderboard {
+            .players_box {
+                position: relative;
+                width: 100%;
+                margin-top: 15px;
+
+                .player {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 17px;
+                    opacity: 0.5;
+
+                    .number {
+                        width: 25px;
+                        font-family: "Larsseit-Bold";
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: rgba(255, 255, 255) !important;
+                    }
+                    .avatar {
+                        position: relative;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: rgb(59, 59, 59);
+
+                        img {
+                            width: 40px;
+                            border-radius: 50%;
+                        }
+                    }
+                    .detail {
+                        width: 135px;
+                        padding-left: 18px;
+                        color: #fff !important;
+
+                        .address {
+                            font-family: "Larsseit-Bold";
+                            font-size: 14px;
+                            line-height: 20px;
+                            color: rgba(255, 255, 255) !important;
+                        }
+                        .chip {
+                            display: flex;
+                            align-items: center;
+                            font-family: "Larsseit-Regular";
+                            font-size: 9px;
+                            line-height: 12px;
+                            color: rgba(255, 255, 255) !important;
+
+                            img {
+                                width: 10px;
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                    .empty_slot {
+                        font-family: "Larsseit-Bold";
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: rgba(255, 255, 255) !important;
+                        padding-left: 18px;
+                    }
+                }
+
+                .active {
+                    position: relative;
+                    width: 290px;
+                    margin-left: -40px;
+                    margin-bottom: 20px;
+                    padding: 8px 40px;
+                    background: linear-gradient(0deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06)), #000000;
+                    border: 1px solid #2a2a2a;
+                    box-sizing: border-box;
+                    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+                    border-radius: 10px;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+.sub_profile {
+    max-width: 600px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 0px 40px 0px;
+
+    @include mq($until: 1267px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-bottom: 90px;
+        margin-left: 50px;
+        margin-top: 0px;
+        min-width: 600px;
+        display: none;
+    }
+
+    @include mq($until: 499px) {
+        display: none;
+    }
+
+    .lower {
+        padding: 28px;
+        margin: 40px auto 0;
+        border: 1px solid rgba(42, 42, 42, 1);
+        border-radius: 16px;
+        width: 285px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+
+        @include mq($until: 1267px) {
+            // margin-left: 0px;
+        }
+
+        .lower_ice_amount,
+        .lower_xdg_amount {
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-size: 41px;
+            line-height: 120%;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .lower_ice_usd,
+        .lower_xdg_usd {
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .lower_ice_text,
+        .lower_xdg_text {
+            display: block;
+            font-family: "Larsseit-Bold";
+            font-style: normal;
+            font-size: 14px;
+            line-height: 27px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 14px;
+            cursor: pointer;
+        }
+
+        .lower_header {
+            font-family: "Larsseit-Bold";
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .lower_img {
+            height: 65px;
+            align-self: center;
+            margin-top: 0px;
+        }
+
+        .lower_text {
+            font-family: "Larsseit-Regular";
+            text-align: center;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 15px;
+            margin-bottom: 0px;
+        }
+
+        .lower_button {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            margin-top: 20px;
+            width: 100%;
+            background: rgb(31, 31, 31);
+            color: white;
+            border-radius: 10px;
+            height: 40px;
+            font-family: "Larsseit-Bold";
+            font-size: 14px;
+            transition: 0.2s ease-in !important;
+
+            &:hover,
+            &:active,
+            &:focus {
+                opacity: 0.6;
+                background: rgb(31, 31, 31) !important;
+                color: white !important;
+                filter: none !important;
+                transition: 0.2s ease-in;
+            }
+        }
+
+        .account_age_bonus {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .content {
+                width: 180px;
+                height: 32px;
+                background: #3b3b3b;
+                box-shadow: 0px 22.8571px 45.7143px rgba(0, 0, 0, 0.24);
+                border-radius: 1000px;
+
+                .box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 52px;
+                    height: 32px;
+                    background: linear-gradient(180.53deg, #2e2e2e 0.46%, #1b1b1b 99.54%);
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    border-radius: 1000px;
+                    font-family: "Larsseit-Regular";
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 21px;
+                    text-align: right;
+                    color: #ffffff !important;
+                    margin-left: 0px;
+                }
+            }
+            .bottom {
+                padding-left: 10px;
+                margin-top: 5px;
+                font-family: "Larsseit-Regular";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 14px;
+                word-spacing: 9px;
+                text-align: left;
+                color: rgba(255, 255, 255, 0.5) !important;
+            }
+        }
+    }
+}

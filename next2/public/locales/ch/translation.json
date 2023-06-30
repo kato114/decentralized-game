@@ -1,0 +1,68 @@
+{
+  "navMenu": {
+    "PLAY": "播放",
+    "DAO": "DAO",
+    "OFFERINGS": "产品",
+    "EVENTS": "事件",
+    "NEWS_BLOG": "新闻和博客",
+    "DOCS": "文档",    
+    "MYACCOUNT": "我的账户"
+  },
+
+  "Home": {
+    "PLAY": "播放",
+    "ANDOWN": "（和自己的）",
+    "FIRSTEVER": "有史以来第一个元节赌场",
+    "YOUAREHOUSE": "有了$DG，您就是房子：您控制利润，为新游戏投票，并通过玩游戏直接赚钱",
+    "INFO": "信息",
+    "LEARNMORE": "了解更多",
+    "PLAYNOW": "立即播放",
+
+    "PLAYTOEARN": "玩赚钱",
+    "PLAY_GAMES_META": "在元宇宙中玩游戏，赢或输赢取 $DG 代币。以 $DG 返还最多 50% 的预期损失。",
+    "GAMES": "游戏",
+    "SEEGAMES": "看游戏",
+    "EARNAPY": "赚取 APY%",
+    "STAKE_DG_GOVERNANCE": "在治理中投入 $DG 并获得高达 40% 的收益奖励。",
+    "VOTE_IN_THE_DAO": "在 DAO 中投票",
+    "BE_THE_HOUSE": "（成为房子）",
+    "WITH_THE_DG_DAO": "有了 $DG DAO，你就拥有了赌场。控制利润，为新游戏投票，并决定功能提案。",
+    "EXPLORER": "探索",
+    "EXPLORER_THREASURY": "探索金库",
+    "OUR_PARTNERS": "我们的合作伙伴",
+    "HOW_TO_START_DG": "如何从 $DG 开始",
+    "GET_STARTED": "开始",
+    "START_HERE": "从这里开始",
+    "JOIN_OUR_COMMUNITY": "加入我们的社区！"
+  },
+
+  "Footer": {
+    "TOKEN": "令牌",
+    "TREASURY": "国库",
+    "DAOHOME": "",
+    "GOVERNANCE": "治理",
+    "GAMEPLAY": "游戏玩法",
+    "LIQUDITY": "流动性",
+
+    "PLAY": "播放",
+    "GAMES": "游戏",
+    "CASINO": "赌场",
+    "LEADERBOARD": "排行榜",
+
+    "SHOP": "商店",
+    "NFTS": "NFT",
+    "DCL_SHOPS": "DCL 商店",
+    "EVENTS": "事件",
+    "ALL_EVENTS": "所有事件",
+    "PARTNER_SHIP": "合作伙伴关系",
+
+    "NEWS": "新闻",
+    "BLOG": "博客",
+    "JOIN_OUR_NEWS_LETTER": "加入我们的时事通讯！",
+    "SUBSCRIBE_TO_OUR_NEWSLETTER": "订阅我们的时事通讯以了解我们每周的更新。",
+    "COPYRIGHT_2021": "Copyright © 2021 Web4 LTD. 版权所有",
+
+    "SIGNUP_FOR_SUBSTACK": "注册子堆栈",
+    "WE_USE_CLLOKIES": "我们使用 cookie 来创造更好的体验。"
+  }  
+}

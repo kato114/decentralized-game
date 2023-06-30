@@ -1,0 +1,68 @@
+{
+  "navMenu": {
+    "PLAY": "Jugar el juego",
+    "DAO": "DAO",
+    "OFFERINGS": "Offerings",
+    "EVENTS": "Eventos",
+    "NEWS_BLOG": "Noticias y blog",
+    "DOCS": "Docs",
+    "MYACCOUNT": "Mi cuenta"
+  },
+  
+  "Home": {
+    "PLAY": "Jugar el juego",
+    "ANDOWN": "(y propio)",
+    "FIRSTEVER": "el primer casino metaverso",
+    "YOUAREHOUSE": "Con $ DG, tú eres la casa: controlas las ganancias, votas en nuevos juegos y recuperas dinero directamente jugando",
+    "INFO": "Información",
+    "LEARNMORE": "Más información",
+    "PLAYNOW": "Jugar ahora",
+
+    "PLAYTOEARN": "Jugar para ganar",
+    "PLAY_GAMES_META": "Juegue juegos en el metaverso y gane $ DG token gane o pierda. Obtenga hasta el 50% de sus pérdidas esperadas en $ DG.",
+    "GAMES": "Juegos Juegos",
+    "SEEGAMES": "Ver juegos",
+    "EARNAPY": "Gane APY%",
+    "STAKE_DG_GOVERNANCE": "Apueste $ DG en la gobernanza y gane hasta un 40% en recompensas de rendimiento.",
+    "VOTE_IN_THE_DAO": "Vota en el DAO",
+    "BE_THE_HOUSE": "(Sé la casa)",
+    "WITH_THE_DG_DAO": "Con $ DG DAO, eres dueño del casino. Controla las ganancias, vota por nuevos juegos y decide las propuestas de funciones.",
+    "EXPLORER": "Explorar",
+    "EXPLORER_THREASURY": "Explorar tesorería",
+    "OUR_PARTNERS": "Nuestros socios",
+    "HOW_TO_START_DG": "Cómo empezar con $ DG",
+    "GET_STARTED": "Comenzar",
+    "START_HERE": "Empiece aquí",
+    "JOIN_OUR_COMMUNITY": "¡Únete a nuestra comunidad!"
+  },
+
+  "Footer": {
+    "TOKEN": "Token",
+    "TREASURY": "Tesorería",
+    "GOVERNANCE": "Gobernanza",
+    "DAOHOME": "",
+    "GAMEPLAY": "Jugabilidad",
+    "LIQUDITY": "Liquidez",
+
+    "PLAY": "Jugar",
+    "GAMES": "Juegos",
+    "CASINO": "Casino",
+    "LEADERBOARD": "Tabla de clasificación",
+
+    "SHOP": "Tienda",
+    "NFTS": "NFT",
+    "DCL_SHOPS": "Tiendas DCL",
+    "EVENTS": "Eventos",
+    "ALL_EVENTS": "Todos los eventos",
+    "PARTNER_SHIP": "Asociaciones",
+
+    "NEWS": "Noticias",
+    "BLOG": "Blog",
+    "JOIN_OUR_NEWS_LETTER": "¡Únase a nuestro boletín!",
+    "SUBSCRIBE_TO_OUR_NEWSLETTER": "Suscríbase a nuestro boletín para mantenerse al día con nuestras actualizaciones semanales",
+    "COPYRIGHT_2021": "Copyright © 2021 Web4 LTD. Todos los derechos reservados",
+
+    "SIGNUP_FOR_SUBSTACK": "Registrarse en la substack",
+    "WE_USE_CLLOKIES": "Usamos cookies para crear una mejor experiencia."
+  }
+}

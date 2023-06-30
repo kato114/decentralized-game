@@ -1,0 +1,233 @@
+@import "styles/base.scss";
+
+.lower {
+  padding: 28px;
+  border: 1px solid rgba(42, 42, 42, 1);
+  border-radius: 16px;
+  min-width: 285px;
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 60px;
+  height: 100%;
+  margin-bottom: 120px;
+
+  .lower_header {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .lower_img {
+    width: 240px;
+    align-self: center;
+    margin-top: -8px;
+  }
+
+  .apy_text {
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0px;
+  }
+
+  .apy_percent {
+    font-family: Larsseit-Bold;
+    font-size: 41px;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-top: -4px;
+  }
+
+  .lower_text {
+    font-family: Larsseit-Regular;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .lower_button {
+    width: 100%;
+    background: #006eff;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+  }
+
+  .lower_button {
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+    background: rgb(31, 31, 31);
+    color: white;
+    transition: 0.2s ease-in !important;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: rgb(31, 31, 31) !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      background: rgb(31, 31, 31) !important;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+  }
+
+  .lower_value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .DG_value {
+      font-family: Larsseit-Bold;
+      font-size: 41px;
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .price {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 16px;
+  }
+
+  .claim_DG {
+    margin-top: 0;
+    margin-bottom: 14px;
+  }
+
+  .see_all_rewards {
+    color: white;
+    cursor: pointer;
+    line-height: 27px;
+    text-align: center;
+  }
+}
+
+.lower_gameplay {
+  padding: 28px;
+  border: 1px solid rgba(42, 42, 42, 1);
+  border-radius: 16px;
+  min-width: 391px;
+  width: 391px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-top: 60px;
+  height: 100%;
+  margin-bottom: 120px;
+
+  .lower_header_two {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .gameplay_container {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 5px;
+
+    .gameplay_img {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-self: center;
+    }
+
+    .gameplay_right {
+      display: flex;
+      padding-left: 18px;
+      justify-content: space-between;
+      width: 100%;
+
+      .gameplay_top {
+        font-family: Larsseit-Bold;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5) !important;
+        margin-bottom: 0px;
+      }
+
+      .gameplay_title {
+        font-family: Larsseit-Bold;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 1) !important;
+        margin-bottom: 0px;
+        margin-top: -2px;
+      }
+
+      .reward_stats {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-self: flex-end;
+        flex-direction: column;
+
+        .gameplay_right {
+          font-family: Larsseit-Bold;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.5) !important;
+          margin-bottom: 0px;
+          justify-content: flex-end;
+        }
+
+        .gameplay_right_bottom {
+          font-family: Larsseit-Bold;
+          font-size: 20px;
+          color: rgba(255, 255, 255, 1) !important;
+          margin-bottom: 0px;
+          text-align: right;
+          margin-top: -2px;
+        }
+      }
+    }
+  }
+
+  .play_button {
+    margin-top: 20px;
+    width: 100%;
+    background: #006eff;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    line-height: 18px;
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    transition: 0.2s ease-in !important;
+
+    &:active,
+    &:focus {
+      opacity: 1;
+      background: #006eff;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+
+    &:hover {
+      opacity: 0.6;
+      background: #006eff;
+      color: white !important;
+      filter: none !important;
+      transition: 0.2s ease-in;
+    }
+  }
+}

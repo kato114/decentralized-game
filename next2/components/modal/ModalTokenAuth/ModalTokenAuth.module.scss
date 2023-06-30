@@ -1,0 +1,209 @@
+@import "styles/base.scss";
+
+.open_button {
+  margin-top: 0px !important;
+  margin-right: 10px !important;
+  background: #006eff !important;
+  color: white !important;
+  border-radius: 12px !important;
+  line-height: 20px !important;
+  font-family: Larsseit-Medium !important;
+  font-size: 17px !important;
+  width: 167px;
+  height: 48px;
+}
+
+.withdraw_modal {
+  width: 480px !important;
+  background: black !important;
+  border-radius: 24px !important;
+  padding: 40px;
+  transform: scale(1);
+
+  .close_icon {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: -48px;
+    background: #000000;
+    border-radius: 24px !important;
+
+    .button_close {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 100%;
+      padding: 8px 10px 8px 10px;
+    }
+  }
+
+  .help_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: -56px;
+    background: #000000;
+    border-radius: 24px !important;
+    width: 109px;
+    height: 48px;
+    transform: scale(1);
+
+    .discord_svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1px;
+    }
+
+    .help_text {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 22px;
+      margin-left: 8px;
+    }
+  }
+
+  .upgrade_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      .header_text {
+        font-size: 32px;
+        font-family: Larsseit-ExtraBold;
+      }
+    }
+
+    .error_text {
+      font-family: Larsseit-Regular;
+      font-style: normal;
+      font-size: 11px;
+      line-height: 15px;
+      text-align: center;
+      color: #ffb5b5;
+      margin-top: 16px;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 24px;
+      font-family: Larsseit-Regular;
+      margin-top: 0px;
+      margin-bottom: 24px;
+    }
+
+    .upgrade_inner_container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4px;
+      margin-left: -68px;
+
+      .eth_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px !important;
+        height: 61px;
+        width: 148px;
+        border-radius: 18px;
+        background: #090909;
+        border: 1px #2a2a2a solid;
+
+        .eth_amount {
+          font-size: 20px;
+          font-family: Larsseit-Medium;
+        }
+
+        .eth_img {
+          margin-top: 2px;
+          margin-left: 5px;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .eth_description {
+        font-size: 13px;
+        font-family: Larsseit-Regular;
+        color: rgba(255, 255, 255, 0.5) !important;
+        padding-top: 10px;
+      }
+
+      .eth_description_two {
+        font-size: 13px;
+        font-family: Larsseit-Regular;
+        color: rgba(255, 255, 255, 0.5) !important;
+        padding-top: 4px;
+      }
+    }
+
+    .proceed_button {
+      position: relative;
+      width: 100%;
+      background: #006eff !important;
+      color: white !important;
+      border-radius: 16px !important;
+      height: 91px;
+      line-height: 32px;
+      font-family: Larsseit-Regular;
+      font-size: 22px;
+      width: 100%;
+      margin-top: 24px;
+      font-style: normal;
+      letter-spacing: 0.8px;
+      text-align: center;
+
+      img {
+        position: absolute;
+        left: 40px;
+        bottom: 27px;
+        margin-right: 24px;
+        width: 38px;
+      }
+    }
+  }
+}
+
+.metamask_action_container {
+  display: flex;
+  align-items: center;
+  margin-left: -42px;
+  margin-top: 24px;
+
+  .upgrade_right {
+    margin-left: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .upgrade_top_text {
+      font-family: Larsseit-Bold;
+      font-size: 24px;
+      line-height: 33px;
+      font-weight: 700;
+      margin-bottom: 0px;
+    }
+
+    .upgrade_bottom_text {
+      font-family: Larsseit-Bold;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      opacity: 0.75;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@import "styles/base.scss";
+
+.info_modal {
+  transform: scale(0.95);
+	width: 480px !important;
+	padding: 30px 30px 40px 30px;
+	margin-top: 36px !important;
+
+	.button_close {
+		color: white;
+		cursor: pointer;
+		width: 36px;
+		height: 36px;
+		background: black;
+		border-radius: 100%;
+		padding: 8px 10px 8px 10px;
+	}
+
+	.title {
+		font-weight: 800;
+		font-size: 24px !important;
+		letter-spacing: -0.5px;
+		text-align: center;
+	}
+
+	.dg_image {
+		width: 60px !important;
+		margin-top: 18px;
+		align-self: center;
+	}
+
+	.dg_image_gray {
+		width: 60px;
+		margin-top: 18px;
+		align-self: center;
+		filter: grayscale(1);
+	}
+
+	.subtitle_1 {
+		align-self: center;
+		font-size: 24px !important;
+		font-family: Larsseit-Bold !important;
+		margin-top: 12px !important;
+	}
+
+	.subtitle_2 {
+		align-self: center;
+		font-size: 14px !important;
+		font-family: Larsseit-Bold!important;
+		opacity: 0.75;
+	}
+
+	.row_title {
+		font-size: 18px !important;
+		font-family: Larsseit-Bold !important;
+		margin-top: 18px !important;
+	}
+
+	.row_subtitle {
+		font-size: 14px !important;
+		font-family: Larsseit-Bold !important;
+		opacity: 0.75 !important;
+	}
+
+	.buy_button {
+		background: #006eff;
+		color: white;
+		font-size: 18px;
+		font-family: Larsseit-Bold;
+		height: 54px;
+		border-radius: 12px;
+		width: 190px;
+	}
+
+	.learn_button {
+		background: #2b2b2b;
+		color: white;
+		font-size: 18px;
+		font-family: Larsseit-Bold;
+		height: 54px;
+		border-radius: 12px;
+		width: 190px;
+	}
+
+	.buy_button:focus,
+	.learn_button:focus {
+		box-shadow: none;
+		border: 0px solid black;
+	}
+}

@@ -1,0 +1,42 @@
+@import "styles/base.scss";
+
+.outter_container {
+  .missing_img {
+    width: 210px;
+  }
+  .header_text {
+    font-family: Larsseit-Bold;
+    font-size: 24px;
+    color: white;
+    margin-top: 26px;
+    margin-bottom: 16px;
+  }
+
+  .lower_text {
+    margin-top: 0px;
+    font-family: Larsseit-Regular;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5) !important;
+    max-width: 360px;
+  }
+
+  .home_button {
+    background: #006eff;
+    font-family: Larsseit-Bold;
+    font-size: 16px;
+    color: white;
+    transition: 0.2s ease-in !important;
+    height: 48px;
+    width: 177px;
+    border-radius: 14px;
+    line-height: 22px;
+    margin-top: 4px;
+
+    &:hover {
+      opacity: 0.6;
+      background: #006eff;
+      color: white;
+      transition: 0.2s ease-in !important;
+    }
+  }
+}

@@ -1,0 +1,315 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+
+  # ==================== IceRegistrant ====================
+  - kind: ethereum/contract
+    name: IceRegistrant
+    network: matic
+    source:
+      address: "0xC9a67eD1472A76d064C826B54c144Ca00DAE4015"
+      abi: IceRegistrant
+      startBlock: 20125429
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+      abis:
+        - name: IceRegistrant
+          file: ./abis/IceRegistrant.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: CEOSet(address)
+          handler: handleCEOSetEvent
+        - event: IceLevelTransfer(address,indexed address,indexed address,indexed uint256)
+          handler: handleIceLevelTransferEvent
+        - event: InitialMinting(indexed uint256,indexed uint256,indexed address)
+          handler: handleInitialMintingEvent
+        - event: LevelEdit(indexed uint256,uint256,uint256,uint256,uint256,bool)
+          handler: handleLevelEditEvent
+        - event: MetaTransactionExecuted(address,address,bytes)
+          handler: handleMetaTransactionExecutedEvent
+        - event: SupplyCheck(string,uint256,uint256,indexed address,indexed string,indexed string)
+          handler: handleSupplyCheckEvent
+        - event: UpgradeItem(indexed uint256,uint256,indexed address,indexed uint256,address,uint256)
+          handler: handleUpgradeItemEvent
+        - event: UpgradeResolved(indexed uint256,indexed address,indexed uint256,address)
+          handler: handleUpgradeResolvedEvent
+        - event: WorkerAdded(address)
+          handler: handleWorkerAddedEvent
+        - event: WorkerRemoved(address)
+          handler: handleWorkerRemovedEvent
+      file: ./src/mappings/iceRegistrant.ts
+
+  # ====================== IceKeeper ======================
+  - kind: ethereum/contract
+    name: IceKeeper1
+    network: matic
+    source:
+      address: "0x25b657a44f62e84b93313929bfc9e8bc822efab0"
+      abi: IceKeeper
+      startBlock: 20603205
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: IceKeeper
+          file: ./abis/IceKeeper.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Claimed(indexed uint256,indexed address,uint256)
+          handler: handleClaimedEvent
+        - event: NewIcedrop(indexed bytes32,indexed address,indexed string,uint256)
+          handler: handleNewIcedropEvent
+        - event: Withdraw(indexed address,uint256)
+          handler: handleWithdrawEvent
+      file: ./src/mappings/iceKeeper.ts
+
+  # ====================== IceKeeper ======================
+  - kind: ethereum/contract
+    name: IceKeeper2
+    network: matic
+    source:
+      address: "0x1AE5397942Bf43CE1Fe3f137622A0a7a33Ac4826"
+      abi: IceKeeper
+      startBlock: 20940167
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: IceKeeper
+          file: ./abis/IceKeeper.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Claimed(indexed uint256,indexed address,uint256)
+          handler: handleClaimedEvent
+        - event: NewIcedrop(indexed bytes32,indexed address,indexed string,uint256)
+          handler: handleNewIcedropEvent
+        - event: Withdraw(indexed address,uint256)
+          handler: handleWithdrawEvent
+      file: ./src/mappings/iceKeeper.ts
+
+  # ========================= ICE =========================
+  - kind: ethereum/contract
+    name: ICE
+    network: matic
+    source:
+      address: "0xc6C855AD634dCDAd23e64DA71Ba85b8C51E5aD7c"
+      abi: ICE
+      startBlock: 19572732
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: ICE
+          file: ./abis/ICE.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: ./src/mappings/erc20.ts
+
+  # ========================= DG ==========================
+  - kind: ethereum/contract
+    name: DG
+    network: matic
+    source:
+      address: "0x2a93172c8DCCbfBC60a39d56183B7279a2F647b4"
+      abi: DG
+      startBlock: 7564153
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: DG
+          file: ./abis/DG.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: ./src/mappings/dg.ts
+
+  # ======================= New DG ========================
+  - kind: ethereum/contract
+    name: DGLight
+    network: matic
+    source:
+      address: "0xef938b6da8576a896f6E0321ef80996F4890f9c4"
+      abi: DGLight
+      startBlock: 21702684
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: DGLight
+          file: ./abis/DGLight.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: ./src/mappings/dgLight.ts
+
+  # ========================= xDG ==========================
+  - kind: ethereum/contract
+    name: xDG
+    network: matic
+    source:
+      address: "0xc6480Da81151B2277761024599E8Db2Ad4C388C8"
+      abi: xDG
+      startBlock: 21711821
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: xDG
+          file: ./abis/xDG.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: ./src/mappings/xDG.ts
+
+  # ============== ERC721CollectionFactoryV2 ===============
+  - kind: ethereum/contract
+    name: ERC721CollectionFactoryV2
+    network: matic
+    source:
+      address: "0xB549B2442b2BD0a53795BC5cDcBFE0cAF7ACA9f8"
+      abi: ERC721CollectionFactoryV2
+      startBlock: 15202563
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+        - Token
+        - Account
+        - Allowance
+        - Transaction
+        - ApprovalEvent
+      abis:
+        - name: ERC721CollectionFactoryV2
+          file: ./abis/ERC721CollectionFactoryV2.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: ProxyCreated(indexed address,bytes32)
+          handler: handleProxyCreated
+      file: ./src/mappings/nftCollectionFactory.ts
+
+templates:
+  # ======================== ERC20 =========================
+  - kind: ethereum/contract
+    name: ERC20
+    network: matic
+    source:
+      abi: ERC20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+      abis:
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApprovalEvent
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransferEvent
+      file: ./src/mappings/erc20.ts
+  # ==================== NFT Collection ====================
+  - kind: ethereum/contract
+    name: NFTCollection
+    network: matic
+    source:
+      abi: NFTCollection
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Global
+      abis:
+        - name: NFTCollection
+          file: ./abis/NFTCollection.json
+        - name: ERC20
+          file: ./abis/ERC20.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,indexed uint256)
+          handler: handleApprovalEvent
+        - event: ApprovalForAll(indexed address,indexed address,bool)
+          handler: handleApprovalForAllEvent
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransferEvent
+        - event: Issue(indexed address,indexed uint256,indexed uint256,uint256,address)
+          handler: handleIssueEvent
+      file: ./src/mappings/nftCollection.ts

@@ -1,0 +1,359 @@
+@import 'styles/base.scss';
+
+.container {
+  background: black;
+
+  .top_section {
+    height: 100vh;
+    max-height: 800px;
+    min-height: 600px;
+    background-image: url('https://res.cloudinary.com/dnzambf4m/image/upload/c_scale,w_210,q_auto:good/v1632927780/amnesia/Amnesia-Background_1_nzqzri.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      background-size: initial;
+      background-position: center;
+    }
+
+    .central_container {
+      margin: 0 auto;
+      width: 338px;
+
+      img {
+        height: 392px;
+        width: 338px;
+      }
+
+      .buttons_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -15px;
+        padding: 0 20px;
+
+        button {
+          margin: 0;
+        }
+
+        .black_button {
+          width: 140px;
+          height: 48px;
+          color: white;
+          font-family: Larsseit-Bold;
+          font-size: 17px;
+          background: #181818;
+        }
+
+        .blue_button {
+          width: 140px;
+          height: 48px;
+          color: white;
+          font-family: Larsseit-Bold;
+          font-size: 17px;
+          background: #9e1869;
+        }
+      }
+    }
+  }
+
+  .bottom_section {
+    position: relative;
+    background-image: url('https://res.cloudinary.com/dnzambf4m/image/upload/c_scale,w_210,q_auto:good/v1632927968/amnesia/amnesia_stars_background.png');
+    background-size: 100% 100%;
+    overflow: hidden;
+    padding: 150px 54px 0px;
+
+    .clouds_top {
+      position: absolute;
+      top: -81px;
+      left: 54px;
+      height: 836px;
+      width: 1114px;
+      background-image: url('https://res.cloudinary.com/dnzambf4m/image/upload/c_scale,w_210,q_auto:good/v1632928095/amnesia/amnesia_clouds_1_nvigwg.png');
+    }
+
+    .clouds_bottom {
+      position: absolute;
+      transform: matrix(-0.92, 0.4, 0.4, 0.92, 0, 0);
+      left: 225px;
+      top: 600px;
+      height: 1125px;
+      width: 1500px;
+      background-image: url('https://res.cloudinary.com/dnzambf4m/image/upload/c_scale,w_210,q_auto:good/v1632928095/amnesia/amnesia_clouds_2_umlwrv.png');
+    }
+
+    .content_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .artists_container {
+        display: flex;
+        justify-content: space-between;
+        height: 282px;
+        width: 100%;
+        margin-bottom: 120px;
+
+        @include mq($until: 1040px) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          height: 800px;
+        }
+        
+        @include mq($from: 1040px, $until: large) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          height: 400px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          width: 1070px;
+        } 
+
+        .artists_text {
+          margin-top: 108px;
+          color: white;
+          font-family: Larsseit-Bold;
+          font-size: 36px;
+          line-height: 46px;
+
+          @include mq($until: 1040px) {
+            text-align: center;
+            margin: 0;
+          }
+        }
+
+        .artists {
+          width: 490px;
+
+          @include mq($until: 1040px) {
+            margin-top: 60px;
+          }
+
+          @include mq($from: 768px, $until: large) {
+            height: 305px;
+          }
+
+          .artists_cards {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+
+            @include mq($until: 768px) {
+              height: 300px;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+            }
+
+            img {
+              width: 132px;
+              height: 166px;
+              filter: drop-shadow(0px 3.35506px 5.87136px rgba(0, 0, 0, 0.4));
+              border-radius: 20px;
+            }
+
+            .anifisia {
+              margin: 118px 0 0;
+              z-index: 4;
+
+              @include mq($until: 991px) {
+                margin-top: 142px;
+              }
+
+              @include mq($until: 768px) {
+                margin: 0 auto -40px 110px;
+              }
+            }
+
+            .luciano1 {
+              margin: 0 0 0 -43px;
+              z-index: 3;
+
+              @include mq($until: 768px) {
+                margin: -43px 110px 0 auto;
+              }
+            }
+            
+            .benny {
+              margin: auto 0 0 -43px;
+              z-index: 2;
+
+              @include mq($until: 768px) {
+                margin: -43px auto 0 110px;
+              }
+            }
+            
+            .luciano {
+              margin: 0 0 0 -43px;
+              z-index: 1;
+              @include mq($until: 768px) {
+                margin: -43px 110px 0 auto;
+              }
+            }
+            
+            .paul {
+              margin: auto 0 0 -43px;
+              @include mq($until: 768px) {
+                margin: -43px auto 0 110px;
+              }
+              
+            }
+          }
+        }
+      }
+
+      .partners_container {
+        width: 100%;
+        margin-top: 128px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq($until: medium) {
+          margin-top: 80px;
+        }
+
+        .title {
+          font-family: Larsseit-Bold;
+          font-size: 36px;
+          line-height: 49px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin: 0;
+          margin-bottom: 50px;
+
+          @include mq($until: medium) {
+            margin-top: 130px;
+          }
+
+          &:nth-of-type(2) {
+            margin: 216px 0 30px;
+
+            @include mq($until: medium) {
+            margin-top: 130px;
+          }
+          }
+        }
+
+        .partner_images {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .image_section {
+            height: 15%;
+            width: 15%;
+            align-self: center;
+            margin: 20px 20px 20px 20px;
+          }
+        }
+      }
+
+      .media_partners_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 47px;
+        margin-left: 35px;
+
+        @include mq($until: medium) {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          margin-top: 30px;
+          margin-left: 0;
+        }
+
+        .eightbtc {
+          height: 44px;
+
+          @include mq($until: medium) {
+            margin-top: 40px;
+          }
+        }
+
+        .chinanews {
+          margin: 0 50px;
+
+          @include mq($until: medium) {
+            margin-top: 50px;
+          }
+        }
+
+        .edm {
+          margin-top: -34px;
+          height: 78px;
+
+          @include mq($until: medium) {
+            margin-top: 40px;
+          }
+        }
+      }
+
+      .dates_container {
+        z-index: 1;
+        width: 100%;
+        margin-top: 217px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mq($until: large) {
+          margin-top: 180px;
+        }
+
+        .phase_1 {
+          height: 46px;
+          width: 348px;
+        }
+
+        .dates {
+          height: 69px;
+          width: 614px;
+
+          @include mq($until: medium) {
+            height: 30px;
+            width: 300px;
+          }
+        }
+
+        .buttons_container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 24px 0 237px;
+          width: 295px;
+
+          button {
+            margin: 0;
+          }
+
+          .black_button {
+            width: 140px;
+            height: 48px;
+            color: white;
+            font-family: Larsseit-Bold;
+            font-size: 17px;
+            background: #181818;
+          }
+
+          .blue_button {
+            width: 140px;
+            height: 48px;
+            color: white;
+            font-family: Larsseit-Bold;
+            font-size: 17px;
+            background: #9e1869;
+          }
+        }
+      }
+    }
+  }
+}

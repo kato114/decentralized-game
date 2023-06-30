@@ -1,0 +1,121 @@
+@import 'styles/base.scss';
+
+.open_button {
+  background-color: #1F1F1F !important;
+  color: white !important;
+  height: 43px;
+  font-family: Larsseit-Bold;
+  font-size: 14px; 
+  border-radius: 10px !important;
+  width: 100%;
+}
+
+.success_modal {
+  width: 480px !important;
+  height: 320px !important;
+  background: black !important;
+  border-radius: 16px !important;
+  padding: 40px;
+
+  .top_buttons {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0px;
+    top: -56px;
+    height: 48px;
+    width: 100%;
+
+    .button_close {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      cursor: pointer;
+      width: 36px;
+      height: 36px;
+      background: black;
+      border-radius: 24px;
+      padding: 8px 10px 8px 10px;
+    }
+    .button_help {        
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+
+        color: white;
+        cursor: pointer;
+        width: 109px;
+        height: 48px;
+        background: black;
+        border-radius: 24px;
+        padding: 8px 10px 8px 10px;
+
+    }
+  }
+  
+  .wear_box_body {
+    .header {
+      font-family: Larsseit-ExtraBold;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: -0.7px;
+      color: #FFFFFF;
+      margin-top: 2px;
+    }
+
+    .description {
+      font-family: Larsseit-Regular;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 6px;
+
+      a {
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #376aaf;
+      }
+    }
+
+    .button_area {
+      .button_close {
+        background: #006EFF;
+        border-radius: 16px;
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 25px;
+        height: 91px;
+        width: 100%;
+
+        .icon {
+          width: 41px;
+          height: 41px;
+          margin-right: 28px;
+        }
+      }
+    }
+  }
+}

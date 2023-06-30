@@ -1,0 +1,30 @@
+/* ----------------------------------------- */
+
+/*               GLOBAL FONTS                */
+
+/* ----------------------------------------- */
+
+@font-face {
+  font-family: 'Larsseit-ExtraBold';
+  src: url('../fonts/Larsseit/Larsseit5.ttf');
+}
+
+@font-face {
+  font-family: 'Larsseit-Bold';
+  src: url('../fonts/Larsseit/Larsseit16.otf');
+}
+
+@font-face {
+  font-family: 'Larsseit-Medium';
+  src: url('../fonts/Larsseit/Larsseit2.ttf');
+}
+
+@font-face {
+  font-family: 'Larsseit-Regular';
+  src: url('../fonts/Larsseit/Larsseit13.ttf');
+}
+
+@font-face {
+  font-family: 'Larsseit-Light';
+  src: url('../fonts/Larsseit/Larsseit4.ttf');
+}

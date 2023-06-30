@@ -1,0 +1,102 @@
+.assign_withdraw_manager {
+    width: 480px !important;
+    height: 260px !important;
+    background: black !important;
+    border-radius: 16px !important;
+    padding: 40px;
+
+    .top_buttons {
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 0px;
+        top: -56px;
+        height: 48px;
+        width: 100%;
+
+        .button_close {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+            background: black;
+            border-radius: 24px;
+            padding: 8px 10px 8px 10px;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+
+        .header {
+            font-family: Larsseit-ExtraBold;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 32px;
+            text-align: center;
+            letter-spacing: -0.7px;
+            color: #ffffff;
+            margin-top: 2px;
+        }
+
+        .description {
+            font-family: Larsseit-Regular;
+            font-style: normal;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 6px;
+
+            a {
+                cursor: pointer;
+            }
+
+            a:hover {
+                color: #376aaf;
+            }
+        }
+
+        .button_area {
+            .button_close {
+                background: #1f1f1f;
+                border-radius: 16px;
+                font-family: Larsseit-Bold;
+                font-size: 24px;
+                line-height: 33px;
+                text-align: center;
+                color: #ffffff;
+                margin-top: 25px;
+                height: 91px;
+                width: 100%;
+                transition: 0.2s ease-in;
+
+                abbr {
+                    position: relative;
+                    top: -8px;
+                    font-family: Larsseit-Regular;
+                    font-size: 16px;
+                    font-weight: 100;
+                    line-height: 21px;
+                    color: rgba(255, 255, 255, 0.5);
+                }
+
+                &:hover {
+                    opacity: 0.6;
+                    transition: 0.2s ease-in;
+                }
+            }
+        }
+    }
+}

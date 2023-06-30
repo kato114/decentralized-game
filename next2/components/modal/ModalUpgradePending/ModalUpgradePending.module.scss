@@ -1,0 +1,133 @@
+@import 'styles/base.scss';
+
+.open_button {
+  background-color: #006EFF !important;
+  color: white !important;
+  height: 42px;
+  width: calc(50% - 8px);
+  border-radius: 10px !important;  
+  font-family: Larsseit-Bold;
+  font-size: 14px !important;
+}
+
+.withdraw_modal {
+  width: 480px !important;
+  background: black !important;
+  border-radius: 24px !important;
+  padding: 40px 55px;
+
+  .header_buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      cursor: pointer;
+      position: absolute;
+      left: 0px;
+      top: -56px;
+      height: 48px;
+      width: 100%;
+  
+      .button_close {        
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        
+        width: 36px;
+        height: 36px;
+        background: black;
+        color: white;
+
+        cursor: pointer;        
+        border-radius: 24px;
+        margin-top: 10px;
+        padding: 8px 10px 8px 10px;
+      }
+      .button_help {        
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+
+          font-family: Larsseit-Bold;
+          font-style: normal;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: center;  
+          color: white;
+
+          cursor: pointer;
+          width: 109px;
+          height: 48px;
+          background: black;
+          border-radius: 24px;
+          padding: 8px 10px 8px 10px;
+      }
+  }
+  
+  .upgrade_container {
+
+    .header {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-family: Larsseit-ExtraBold;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .logo {
+      width: 42px;
+    }
+
+    .description {
+      font-size: 18px;
+      line-height: 24px;
+      font-family: Larsseit-Regular;
+      margin-top: 0px;
+      margin-bottom: 24px;
+    }
+
+    .steps_container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      padding-left: 25px;     
+    }
+
+    .next_button {
+      font-size: 18px;
+      line-height: 24px;
+      background: #006eff;
+      color: white;
+      border-radius: 10px;
+      margin: 0 auto;
+      min-height: 48px !important;
+      padding: 12px 24px !important;
+    }
+  }
+
+  .proceed_button {
+    position: relative;
+    width: 100%;
+    background: #006eff !important;
+    color: white !important;
+    border-radius: 16px !important;
+    height: 91px;
+    line-height: 32px;
+    font-family: Larsseit-Regular;
+    font-size: 22px;
+    width: 100%;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    text-align: center;
+
+    img {
+      position: absolute;
+      left: 30px;
+      bottom: 25px;
+      margin-right: 24px;
+      width: 38px;
+    }
+  }
+}
+

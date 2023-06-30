@@ -1,0 +1,366 @@
+@import 'styles/base.scss';
+
+.governanace_main_wrapper {
+  padding: 72px 0;
+  max-width: 780px;
+  margin: auto;
+  text-align: center;
+
+  .welcome_text {
+    font-family: Larsseit-Bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $color-white;
+    margin-bottom: 8px;
+  }
+
+  .welcome_content {
+    font-family: Larsseit-Regular;
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.5;
+    max-width: 610px;
+    margin: 0 auto 40px auto;
+  }
+
+  .staking_header {
+    font-family: Larsseit-Bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-white;
+    margin: 0;
+
+    img {
+      width: 22px;
+      height: 20px;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .staking_subfooter {
+    font-family: Larsseit-Bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-white;
+    opacity: 0.5;
+    margin: 0;
+
+    a {
+      color: #509bff;
+      cursor: pointer;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0.8;
+        color: #509bff;
+      }
+    }
+  }
+
+  .governance_stake_overview {
+    width: 100%;
+    padding-top: 28px;
+    padding-bottom: 44px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    margin-bottom: 40px;
+
+    img {
+      width: 39px;
+      height: 39px;
+      margin-left: 8px;
+    }
+
+    .item_value {
+      margin: 0 auto;
+      font-family: Larsseit-Bold;
+      color: $color-white;
+      font-size: 42px;
+      letter-spacing: -0.7px;
+      line-height: 52px;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .staking_module {
+    width: 100%;
+    padding: 28px 20px 38px 20px;
+    border: 1px solid $border-color;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include mq($until: medium) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .staking_switch {
+      display: flex;
+      justify-content: center;
+      border: 1px solid $border-color;
+      border-radius: 24px;
+      padding: 3px;
+      max-width: 164px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $color-black;
+
+      div {
+        font-family: 'Larsseit-Medium';
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: $color-white;
+        background: transparent;
+        width: 75px;
+        padding: 4px;
+        margin: 2px;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          background: #1f1f1f;
+          transition: 0.2s ease-in;
+        }
+      }
+
+      .active {
+        background: #1f1f1f;
+      }
+    }
+
+    .divider {
+      position: absolute;
+      left: 50%;
+      top: 60px;
+      height: calc(100% - 136px);
+      border-left: 1px solid $border-color;
+
+      @include mq($until: medium) {
+        display: none;
+      }
+    }
+
+    .staking_inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 330px;
+
+      @include mq($until: medium) {
+        margin: 32px auto;
+      }
+
+      .contract_div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+
+        .uniswap_ellipse {
+          width: 51px;
+          height: 51px;
+          margin-top: 1px;
+          margin-bottom: 15px;
+          border-radius: 50%;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          height: 60px;
+          border: 1px solid #2a2a2a;
+          border-radius: 16px;
+          margin-bottom: 10px;
+
+          img {
+            width: 25px;
+          }
+
+          .dg_input {
+            font-family: 'Larsseit-Bold';
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            background: transparent;
+            border: none;
+            margin-left: 5px;
+            text-align: left;
+            color: rgb(255, 255, 255) !important;
+          }
+
+          input:focus-visible {
+            border: none;
+            outline: none;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type='number'] {
+            -moz-appearance: textfield;
+          }
+        }
+
+        .max_button {
+          position: absolute;
+          right: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50px;
+          height: 35px;
+          padding: 5px;
+          background: #1f1f1f;
+          border-radius: 8px;
+          font-family: 'Larsseit-Light';
+          letter-spacing: 0.8px;
+          color: #ffffff;
+          transition: 0.2s ease-in;
+
+          &:active,
+          &:focus {
+            color: #ffffff;
+            background: #1f1f1f;
+            opacity: 1;
+            transition: 0.2s ease-in;
+          }
+
+          &:hover {
+            color: #ffffff;
+            background: #1f1f1f;
+            opacity: 0.6;
+            transition: 0.2s ease-in;
+          }
+        }
+
+        .description {
+          h4 {
+            font-family: 'Larsseit-Bold';
+            font-size: 11px;
+            line-height: 14px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            margin-bottom: 2px;
+          }
+
+          h4.success {
+            color: #67dd6c !important;
+          }
+
+          h4.error {
+            color: #ffb5b5 !important;
+          }
+
+          h4.gray {
+            opacity: 0.5;
+          }
+
+          h4.active {
+            font-size: 11px;
+            line-height: 14px;
+            letter-spacing: 0.5px;
+            color: #67dd6c !important;
+            margin-bottom: 2px;
+          }
+
+          p {
+            text-align: center;
+            font-size: 9px;
+            line-height: 12px;
+            color: rgba(255, 255, 255, 0.5) !important;
+          }
+        }
+      }
+
+      .button_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 16px;
+
+        span {
+          color: $color-white;
+          opacity: 0.5;
+          font-size: 10px;
+          line-height: 14px;
+        }
+
+        .button,
+        .button_blue {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 42px;
+          padding: 5px;
+          margin-right: 0px;
+          background: #1f1f1f;
+          border-radius: 8px;
+          font-family: 'Larsseit-Bold';
+          letter-spacing: 0.5px;
+          color: #ffffff;
+          transition: 0.2s ease-in;
+          margin-bottom: 8px;
+
+          img {
+            width: 12px;
+            height: 12px;
+          }
+
+          &:active,
+          &:focus {
+            color: #ffffff;
+            opacity: 1;
+            transition: 0.2s ease-in;
+          }
+
+          &:hover {
+            color: #ffffff;
+            opacity: 0.6;
+            transition: 0.2s ease-in;
+          }
+        }
+
+        .button_blue {
+          background: #006eff;
+        }
+      }
+    }
+  }
+
+  .staking_footer {
+    padding: 28px 12px;
+    border-radius: 16px;
+    border: 1px solid $border-color;
+  }
+}

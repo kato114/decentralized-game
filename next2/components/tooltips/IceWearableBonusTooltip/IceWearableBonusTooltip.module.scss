@@ -1,0 +1,62 @@
+@import "styles/base.scss";
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px 5px 12px;
+  border: 1px solid #2a2a2a;
+  box-sizing: border-box;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  
+  p {
+    font-family: Larsseit-Regular;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  img {
+    margin-left: 3px;
+    width: 15px;
+    height: 12px;
+  }
+}
+
+.popup {
+  margin-right: -5px !important;
+  margin-bottom: 11px !important;
+  height: auto !important;
+  
+  p {
+    font-weight: 700;
+  }
+
+  &::before {
+    background-color: #1f1f1f !important;
+    box-shadow: 1px 1px 0 0 #1f1f1f !important;
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card_body {
+    .card {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+}
+
+@include mq($until: medium) {
+  .card_body {
+    .card {
+      padding: 5px 15px;
+      font-size: 13px;
+    }
+  }
+}

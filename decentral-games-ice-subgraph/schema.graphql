@@ -1,0 +1,308 @@
+enum DateType {
+  All
+  Year
+  Month
+  Day
+  Hour
+}
+
+type Global @entity {
+  id: ID!
+  numberValue: BigInt!
+  stringValue: Bytes
+  type: DateType
+  timestamp: Int
+}
+
+type Account @entity {
+  id: ID!
+  index: BigInt!
+  address: Bytes!
+  isWorker: Boolean!
+  updatedAt: Int
+  token: [Balance]! @derivedFrom(field: "account")
+  nft: [NFTItem]! @derivedFrom(field: "owner")
+  allowance: [Allowance]! @derivedFrom(field: "owner")
+  nftAllowance: [NFTAllowance]! @derivedFrom(field: "owner")
+  claim: [Claim]! @derivedFrom(field: "account")
+  approveOwnerEvent: [ApprovalEvent]! @derivedFrom(field: "owner")
+  approveSpenderEvent: [ApprovalEvent]! @derivedFrom(field: "spender")
+  receiveEvent: [TransferEvent]! @derivedFrom(field: "to")
+  sendEvent: [TransferEvent]! @derivedFrom(field: "from")
+  frame: [Frame]! @derivedFrom(field: "minter")
+  request: [Request]! @derivedFrom(field: "tokenOwner")
+  upgrade: [Upgrade]! @derivedFrom(field: "tokenOwner")
+  ceoSetEvent: [CEOSetEvent]! @derivedFrom(field: "newCEO")
+  claimedEvent: [ClaimedEvent]! @derivedFrom(field: "account")
+  iceLevelTransferOldOwnerEvent: [IceLevelTransferEvent]! @derivedFrom(field: "oldOwner")
+  iceLevelTransferNewOwnerEvent: [IceLevelTransferEvent]! @derivedFrom(field: "newOwner")
+  initialMintingEvent: [InitialMintingEvent]! @derivedFrom(field: "tokenOwner")
+  issueEvent: [IssueEvent]! @derivedFrom(field: "beneficiary")
+  metaTransactionExecutedEvent: [MetaTransactionExecutedEvent]! @derivedFrom(field: "userAddress")
+  upgradeItemEvent: [UpgradeItemEvent]! @derivedFrom(field: "tokenOwner")
+  upgradeResolvedEvent: [UpgradeResolvedEvent]! @derivedFrom(field: "tokenOwner")
+  workerAddedEvent: [WorkerAddedEvent]! @derivedFrom(field: "newWorker")
+  workerRemovedEvent: [WorkerRemovedEvent]! @derivedFrom(field: "existingWorker")
+}
+
+# ======================== Token ========================
+type Token @entity {
+  id: ID!
+  address: Bytes!
+  name: String!
+  symbol: String!
+  totalSupply: BigInt!
+  isNFT: Boolean!
+  holder: [Balance]! @derivedFrom(field: "token")
+  nftHolder: [NFTItem]! @derivedFrom(field: "token")
+  allowance: [Allowance]! @derivedFrom(field: "token")
+  nftAllowance: [NFTAllowance]! @derivedFrom(field: "token")
+  request: [Request]! @derivedFrom(field: "tokenAddress")
+  upgrade: [Upgrade]! @derivedFrom(field: "tokenAddress")
+  iceLevelTransferEvent: [IceLevelTransferEvent]! @derivedFrom(field: "tokenAddress")
+  issueEvent: [IssueEvent]! @derivedFrom(field: "token")
+  upgradeItemEvent: [UpgradeItemEvent]! @derivedFrom(field: "tokenAddress")
+  upgradeResolvedEvent: [UpgradeResolvedEvent]! @derivedFrom(field: "tokenAddress")
+  transferEvent: [TransferEvent]! @derivedFrom(field: "token")
+  approvalEvent: [ApprovalEvent]! @derivedFrom(field: "token")
+}
+
+type Allowance @entity {
+  id: ID!
+  token: Token!
+  owner: Account!
+  spender: Account!
+  amount: BigInt!
+}
+
+type Balance @entity {
+  id: ID!
+  account: Account!
+  token: Token!
+  balance: BigInt!
+}
+
+type ApprovalEvent @entity {
+  id: ID!
+  token: Token!
+  owner: Account!
+  spender: Account!
+  amount: BigInt!
+}
+
+type TransferEvent @entity {
+  id: ID!
+  token: Token!
+  from: Account!
+  to: Account!
+  value: BigInt!
+}
+
+# ====================== IceKeeper ======================
+type ProxyCreatedEvent @entity {
+  id: ID!
+  collection: Token!
+  salt: Bytes!
+}
+
+# ========================= NFT =========================
+type NFTApproval @entity {
+  id: ID!
+  token: Token!
+  owner: Account!
+  operator: Account!
+  approved: Boolean!
+}
+
+type NFTAllowance @entity {
+  id: ID!
+  token: Token!
+  owner: Account!
+  spender: Account!
+  tokenId: BigInt!
+}
+
+type NFTItem @entity {
+  id: ID!
+  owner: Account!
+  token: Token!
+  tokenId: BigInt!
+  level: BigInt!
+  createdAt: Int
+}
+
+type IssueEvent @entity {
+  id: ID!
+  beneficiary: Account!
+  token: Token!
+  tokenId: BigInt!
+  itemId: BigInt!
+  issuedId: BigInt!
+  caller: Account!
+  timestamp: BigInt!
+}
+
+# ==================== IceRegistrant ====================
+type Frame @entity {
+  id: ID!
+  minter: Account!
+  frame: BigInt!
+}
+
+type Level @entity {
+  id: ID!
+  isActive: Boolean!
+  costAmountDG: BigInt!
+  moveAmountDG: BigInt!
+  costAmountICE: BigInt!
+  moveAmountICE: BigInt!
+}
+
+type Request @entity {
+  id: ID!
+  itemId: BigInt!
+  issuedId: BigInt!
+  tokenOwner: Account!
+  tokenId: BigInt!
+  tokenAddress: Token!
+}
+
+type Upgrade @entity {
+  id: ID!
+  itemId: BigInt!
+  tokenOwner: Account!
+  tokenId: BigInt!
+  tokenAddress: Token!
+  level: BigInt!
+  costAmountDG: BigInt!
+  costAmountICE: BigInt!
+  timestamp: BigInt!
+}
+
+type CEOSetEvent @entity {
+  id: ID!
+  newCEO: Account!
+  timestamp: BigInt!
+}
+
+type IceLevelTransferEvent @entity {
+  id: ID!
+  oldOwner: Account!
+  newOwner: Account!
+  tokenAddress: Token!
+  tokenId: BigInt!
+  timestamp: BigInt!
+}
+
+type InitialMintingEvent @entity {
+  id: ID!
+  tokenId: BigInt!
+  mintCount: BigInt!
+  tokenOwner: Account!
+  timestamp: BigInt!
+  mintPrice: BigInt!
+  paymentToken: Bytes!
+}
+
+type LevelEditEvent @entity {
+  id: ID!
+  level: BigInt!
+  dgCostAmount: BigInt!
+  dgMoveAmount: BigInt!
+  iceCostAmount: BigInt!
+  iceMoveAmount: BigInt!
+  isActive: Boolean!
+  timestamp: BigInt!
+}
+
+type MetaTransactionExecutedEvent @entity {
+  id: ID!
+  userAddress: Account!
+  relayerAddress: Account!
+  functionSignature: Bytes!
+  timestamp: BigInt!
+}
+
+type SupplyCheckEvent @entity {
+  id: ID!
+  rarity: String!
+  maxSupply: BigInt!
+  price: BigInt!
+  beneficiary: Bytes!
+  metadata: Bytes!
+  contentHash: Bytes!
+  timestamp: BigInt!
+}
+
+type UpgradeItemEvent @entity {
+  id: ID!
+  itemId: BigInt!,
+  issuedId: BigInt!,
+  tokenOwner: Account!,
+  tokenId: BigInt!,
+  tokenAddress: Token!,
+  requestIndex: BigInt!
+  timestamp: BigInt!
+}
+
+type UpgradeResolvedEvent @entity {
+  id: ID!
+  newItemId: BigInt!
+  tokenOwner: Account!
+  newTokenId: BigInt!
+  tokenAddress: Token!
+  timestamp: BigInt!
+}
+
+type WorkerAddedEvent @entity {
+  id: ID!
+  newWorker: Account!
+  timestamp: BigInt!
+}
+
+type WorkerRemovedEvent @entity {
+  id: ID!
+  existingWorker: Account!
+  timestamp: BigInt!
+}
+
+# ====================== IceKeeper ======================
+type Claim @entity {
+  id: ID!
+  account: Account!
+  type: DateType!
+  total: BigInt!
+  timestamp: Int!
+}
+
+type Icedrop @entity {
+  id: ID!
+  ipfsAddress: String!
+  type: DateType!
+  total: BigInt!
+  timestamp: Int!
+}
+
+type ClaimedEvent @entity {
+  id: ID!
+  index: BigInt!
+  account: Account!
+  amount: BigInt!
+  timestamp: BigInt!
+}
+
+type NewIcedropEvent @entity {
+  id: ID!
+  hash: Bytes!
+  master: Account!
+  ipfsAddress: Bytes!
+  total: BigInt!
+  timestamp: BigInt!
+}
+
+type WithdrawEvent @entity {
+  id: ID!
+  account: Account!
+  amount: BigInt!
+  timestamp: BigInt!
+}

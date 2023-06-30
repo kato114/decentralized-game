@@ -1,0 +1,32 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Bignum",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\big.js"
+    },
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "DG-Marketplace",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\server.ts",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "POC Price",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\poc-price.js",
+      "outFiles": ["${workspaceFolder}/dist-poc/**/*.js"]
+    }
+  ]
+}

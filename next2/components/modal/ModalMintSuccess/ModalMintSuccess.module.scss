@@ -1,0 +1,186 @@
+@import 'styles/base.scss';
+
+.open_button {
+  background: #006eff !important;
+  color: white !important;
+  border-radius: 10px !important;
+  height: 64px;
+  line-height: 18px;
+  font-family: Larsseit-Bold;
+  font-size: 22px !important;
+  width: 100%;
+  margin-top: 24px !important;
+}
+
+.activation_success_modal {
+  width: 480px !important;
+  height: 600px !important;
+  background: #000000 !important;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24) !important;
+  border-radius: 24px !important;
+  padding: 40px;
+  transform: scale(0.8);
+
+  .header_buttons {
+      left: 0px;
+      top: -56px;
+      height: 48px;
+      width: 100%;
+
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .button_close {
+        width: 36px;
+        height: 36px;
+        background: black;
+        color: white;
+        cursor: pointer;        
+        border-radius: 50%;
+        padding: 8px 10px 8px 10px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(1.11); 
+      }
+
+      .button_help {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;  
+        color: white;
+        cursor: pointer;
+        width: 109px;
+        height: 48px;
+        background: black;
+        border-radius: 24px;
+        padding: 8px 10px 8px 10px;
+      }
+  }
+  
+  .success_container {
+    margin-top: 5px;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      font-family: Larsseit-ExtraBold;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: white;
+    }
+    .card {
+      margin-top: 39px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .toppercent {
+        position: absolute;
+        width: 94px;
+        height: 41px;
+        left: calc(50% - 50px);
+        top: 95px;
+        background: #1A1A1A;
+        border: 1px solid #2A2A2A;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 93px;
+
+        font-family: Larsseit-Bold;
+        font-style: normal;
+        font-size: 17.6218px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+
+        .diamond {
+          width: 20px !important;
+        }
+      }
+      .image {
+        border-radius: 16px;        
+        text-align: center;
+
+        .logo {
+          width: 241px;
+          height: 241px;
+          border-radius: 18px;
+        }
+      }
+      .properties {
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        .round {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Larsseit-Regular;
+          font-style: normal;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: #FFFFFF;
+          background: #000;
+          box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.24);
+          border-radius: 24px;
+          padding: 5px 12px;
+          border: 1px solid #2a2a2a;
+
+          .diamond {
+            width: 20px !important;
+          }
+
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .primary {
+        background: #006EFF;
+        font-family: Larsseit-Bold;
+        font-style: normal;        
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #006EFF;
+        border-radius: 16px;
+      }
+      .none {
+        background: #000;
+        font-family: Larsseit-Bold;
+        font-style: normal;        
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #000;
+        border-radius: 16px;
+      }
+    }
+  }
+}

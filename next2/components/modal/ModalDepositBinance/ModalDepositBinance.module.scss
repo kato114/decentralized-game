@@ -1,0 +1,184 @@
+@import "styles/base.scss";
+
+.deposit_modal_binance {
+	background: #F1CD50;
+	height: 64px;
+	width: 200px;
+	border-radius: 16px;
+	font-weight: 700;
+	font-size: 20px;
+	color: black;
+	margin-top: -6px;
+	margin-left: 16px;
+	border: 0px solid white;
+}
+
+.deposit_modal {
+	width: 360px !important;
+	padding: 30px;
+
+	.button_close {
+		color: white;
+		cursor: pointer;
+	}
+
+	.title {
+		font-weight: 800;
+		font-size: 24px;
+		text-align: left;
+		letter-spacing: -0.5px;
+		padding-bottom: 12px;
+	}
+
+	.subtitle {
+		font-size: 18px;
+		line-height: 24px;
+		color: rgba(255, 255, 255, 1) !important;
+	}
+
+	.subtitle_2 {
+		font-size: 18px;
+		line-height: 24px;
+		color: rgba(255, 255, 255, 1) !important;
+	}
+
+	.continue_binance {
+		background: #F1CD50 !important;
+		height: 64px;
+		border-radius: 16px;
+		font-weight: 700;
+		font-size: 18px;
+		color: black;
+		border: 0px solid white;
+		width: 100%;
+	}
+}
+
+.busd_modal {
+	width: 400px !important;
+	border-radius: 24px;
+	padding: 30px;
+
+	.title {
+		font-weight: 800;
+		font-size: 24px;
+		text-align: center;
+	}
+
+	.subtitle {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	.outline_button {
+		height: 68px;
+		border-radius: 24px;
+		background: black;
+		border: 2px solid rgba(255, 255, 255, 0.15);
+		width: 100%;
+		padding: 0 21px 1px 22px;
+	}
+
+	.outline_button:hover,
+	.outline_button:focus {
+		border: 2px solid rgba(255, 255, 255, 0.30);
+		background: black;
+	}
+
+	.busd_img {
+		margin-top: 9px;
+		margin-right: 12px;
+		height: 24px;
+	}
+
+	.deposit_address {
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.deposit_subtitle {
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.75) !important;
+		margin-left: -32px;
+		margin-top: -4px;
+	}
+
+	.busd_img_2 {
+		margin-right: 12px;
+		margin-top: 6px;
+		height: 24px;
+	}
+
+	.deposit_address_2 {
+		font-size: 18px;
+		font-weight: 700;
+		float: right;
+	}
+
+	.deposit_subtitle_2 {
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.75) !important;
+		margin-top: -4px;
+	}
+
+	.deposit_subtitle_3 {
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.75) !important;
+		text-align: right;
+		margin-top: -4px;
+	}
+
+	.copy_binance {
+		width: 100% !important;
+		background: #F1CD50;
+		height: 68px;
+		width: 200px;
+		border-radius: 16px;
+		font-weight: 700;
+		font-size: 18px;
+		color: black;
+		border: 0px solid white;
+	}
+
+	.continue_subtitle {
+		font-size: 18px;
+		font-family: Larsseit-Bold;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.5) !important;
+		margin-top: 18px;
+	}
+
+	.withdraw_input {
+		width: 100px !important;
+		border: 0px solid white !important;
+		font-weight: 800;
+		font-size: 24px !important;
+		text-align: center;
+	}
+
+	.max_button {
+		height: 36px;
+		border: 2px solid white;
+		border-radius: 12px;
+		color: white;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: -100px;
+		margin-left: calc(100% - 58px);
+	}
+
+	.outline_input {
+		margin-top: -14px !important;
+		font-size: 18px;
+	  background: black !important;
+	  height: 68px;
+	  border-radius: 24px;
+	  background: black;
+	  border: 2px solid rgba(255, 255, 255, 0.15) !important;
+	  width: 100%;
+	  padding: 7px 21px 1px 22px;
+	}
+}
+
+

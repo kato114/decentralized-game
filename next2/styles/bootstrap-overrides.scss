@@ -1,0 +1,41 @@
+@import './base.scss';
+
+// Override default variables before the Bootstrap import
+$theme-colors: (
+  'primary': $color-blue,
+  'secondary': $color-lightgray,
+  'dark': $color-dark,
+);
+$spacers: (
+  1: $spacer * 0.5,
+  2: $spacer,
+  3: $spacer * 1.5,
+  4: $spacer * 2,
+  5: $spacer * 2.5,
+  6: $spacer * 3,
+  7: $spacer * 3.5,
+  8: $spacer * 4,
+  9: $spacer * 4.5,
+  10: $spacer * 5,
+);
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/_functions.scss';
+@import '~bootstrap/scss/_variables.scss';
+@import '~bootstrap/scss/_mixins.scss';
+@import '~bootstrap/scss/_utilities.scss';
+
+@import '~bootstrap/scss/_root.scss';
+@import '~bootstrap/scss/_containers.scss';
+@import '~bootstrap/scss/_grid.scss';
+@import '~bootstrap/scss/_buttons.scss';
+@import '~bootstrap/scss/_helpers.scss';
+@import '~bootstrap/scss/utilities/_api.scss';
+
+// Set global styles for application
+img {
+  max-width: 100%;
+}
+
+body {
+}

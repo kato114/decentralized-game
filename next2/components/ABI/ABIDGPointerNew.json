@@ -1,0 +1,1196 @@
+[
+  {
+    "type": "constructor",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_distributionToken",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_oldPointerAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "string",
+        "name": "name",
+        "internalType": "string"
+      },
+      {
+        "type": "string",
+        "name": "version",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "AffiliateAssigned",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "affiliate",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "address",
+        "name": "player",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "count",
+        "internalType": "uint256",
+        "indexed": true
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "CEOSet",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "newCEO",
+        "internalType": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "MetaTransactionExecuted",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "userAddress",
+        "internalType": "address",
+        "indexed": false
+      },
+      {
+        "type": "address",
+        "name": "relayerAddress",
+        "internalType": "address payable",
+        "indexed": false
+      },
+      {
+        "type": "bytes",
+        "name": "functionSignature",
+        "internalType": "bytes",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Paused",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PointsAdded",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "affiliate",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "address",
+        "name": "player",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "points",
+        "internalType": "uint256",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "total",
+        "internalType": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ProfitAdded",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "affiliate",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "address",
+        "name": "player",
+        "internalType": "address",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "points",
+        "internalType": "uint256",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "total",
+        "internalType": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Unpaused",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdatedAffiliateBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "newBonus",
+        "internalType": "uint256",
+        "indexed": true
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdatedMaxPlayerBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "newBonus",
+        "internalType": "uint256",
+        "indexed": true
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UpdatedPlayerBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "playersCount",
+        "internalType": "uint256",
+        "indexed": true
+      },
+      {
+        "type": "uint256",
+        "name": "newBonus",
+        "internalType": "uint256",
+        "indexed": true
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "WorkerAdded",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "newWorker",
+        "internalType": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "WorkerRemoved",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "existingWorker",
+        "internalType": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "function",
+    "stateMutability": "pure",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "_calculatePoints",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_points",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_ratio",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_diff",
+        "internalType": "uint256"
+      },
+      {
+        "type": "bool",
+        "name": "_reverse",
+        "internalType": "bool"
+      },
+      {
+        "type": "uint256",
+        "name": "_multiplierA",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_multiplierB",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "playerPoints",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplierA",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplierB",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "addPoints",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_points",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_token",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_playersCount",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_wearablesCount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "newPoints",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplierA",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplierB",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "addPoints",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_points",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_token",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "newPoints",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplier",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "multiplierB",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "addPoints",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_points",
+        "internalType": "uint256"
+      },
+      {
+        "type": "address",
+        "name": "_token",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_playersCount",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "addWorker",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_newWorker",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "addWorkerBulk",
+    "inputs": [
+      {
+        "type": "address[]",
+        "name": "_newWorkers",
+        "internalType": "address[]"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "affiliateBonus",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "affiliateCounts",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "affiliateData",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "affiliateHistoryProfit",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "affiliatePlayer",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "affiliateProfit",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "assignAffiliate",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_affiliate",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "ceoAddress",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "changeAffiliateBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_newAffiliateBonus",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "changeDefaultPlayerBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_newDefaultPlayerBonus",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "changeMaxWearableBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_newMaxWearableBonus",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "changePlayerBonus",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "_bonusIndex",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_newBonus",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "collectingEnabled",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      },
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "decimalDiff",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_tokenFrom",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_tokenTo",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "declareContract",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_contract",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "declaredContracts",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "defaultPlayerBonus",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "defaultWearableBonus",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "distributeAllTokens",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      },
+      {
+        "type": "address[]",
+        "name": "_token",
+        "internalType": "address[]"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "distributeTokensForAffiliate",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_affiliate",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_token",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "distributeTokensForPlayer",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_player",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "distributionEnabled",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ],
+    "name": "distributionToken",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "enableCollecting",
+    "inputs": [
+      {
+        "type": "bool",
+        "name": "_state",
+        "internalType": "bool"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "enableDistribtion",
+    "inputs": [
+      {
+        "type": "bool",
+        "name": "_state",
+        "internalType": "bool"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "payable",
+    "outputs": [
+      {
+        "type": "bytes",
+        "name": "",
+        "internalType": "bytes"
+      }
+    ],
+    "name": "executeMetaTransaction",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "userAddress",
+        "internalType": "address"
+      },
+      {
+        "type": "bytes",
+        "name": "functionSignature",
+        "internalType": "bytes"
+      },
+      {
+        "type": "bytes32",
+        "name": "sigR",
+        "internalType": "bytes32"
+      },
+      {
+        "type": "bytes32",
+        "name": "sigS",
+        "internalType": "bytes32"
+      },
+      {
+        "type": "uint8",
+        "name": "sigV",
+        "internalType": "uint8"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "nonce",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "getNonce",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "user",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "isWorker",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "contract OldPointer"
+      }
+    ],
+    "name": "oldPointer",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "pause",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "bool",
+        "name": "",
+        "internalType": "bool"
+      }
+    ],
+    "name": "paused",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "playerBonuses",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "pointsBalancer",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256[]",
+        "name": "_profits",
+        "internalType": "uint256[]"
+      },
+      {
+        "type": "address[]",
+        "name": "_players",
+        "internalType": "address[]"
+      }
+    ],
+    "name": "profitPagination",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_affiliate",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_token",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_offset",
+        "internalType": "uint256"
+      },
+      {
+        "type": "uint256",
+        "name": "_length",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "removeWorker",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_existingWorker",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "removeWorkerBulk",
+    "inputs": [
+      {
+        "type": "address[]",
+        "name": "_workerArray",
+        "internalType": "address[]"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setCEO",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_newCEO",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "setTokenToPointRatio",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_game",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_tokenIn",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "_tokenOut",
+        "internalType": "address"
+      },
+      {
+        "type": "uint256",
+        "name": "_ratio",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "tokenToPointRatio",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      },
+      {
+        "type": "address",
+        "name": "",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "unDeclareContract",
+    "inputs": [
+      {
+        "type": "address",
+        "name": "_contract",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "stateMutability": "nonpayable",
+    "outputs": [],
+    "name": "unpause",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "wearableBonusPerObject",
+    "inputs": []
+  },
+  {
+    "type": "function",
+    "stateMutability": "view",
+    "outputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ],
+    "name": "wearableBonuses",
+    "inputs": [
+      {
+        "type": "uint256",
+        "name": "",
+        "internalType": "uint256"
+      }
+    ]
+  }
+]
